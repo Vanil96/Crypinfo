@@ -1,0 +1,111 @@
+body
+{
+	
+	
+	color: #633a3a;
+    font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	
+}
+
+
+.kontent
+{
+	text-align: center;
+	
+}
+
+.kontent img
+{
+	width: 100%;
+	height: auto;
+	
+}
+
+.kontent p
+{
+	margin-bottom: 30px;
+}
+
+.kontent figcaption
+{
+	margin-top: 8px;
+}
+
+#uphead{
+height: auto;
+
+
+
+}
+
+#leftbody{
+height: auto;
+
+}
+
+
+#rightbody{
+height: auto;
+
+}
+
+#footer{
+height: auto;
+background-color: #181C30;
+border-top:5px,solid,red;
+
+
+}
+
+.card img{
+	min-width:80px;
+	max-width: 140px;
+	margin:0 auto;
+    
+}
+
+
+.tabela img{
+width: auto;
+float:left;
+max-width:35px;
+
+
+}
+
+.tabela span{
+font-weight: bold;
+}
+
+
+
+
+.cryp_calc{
+	color: rgb(134, 42, 219);
+font-weight: bold;
+
+}
+
+.fiat_calc{
+	color: rgb(25, 118, 134);
+font-weight: bold;
+
+}
+
+
+#fiat h6{
+	font-weight: bold;
+
+}
+
+#belka-fiat h5{
+
+display: inline;
+}
+
+
+#info_card{
+font-size: medium;
+
+}

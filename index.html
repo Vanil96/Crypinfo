@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<title>Skoki narciarskie</title>
+	<meta name="description" content="Blog o skokach narciarskich">
+	<meta name="keywords" content="skoki narciarskie, skoczkowie, wyniki">
+	<meta name="author" content="Jan Kowalski">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+
+	
+</head>
+
+<body class="bg-light">
+	
+	<script src="api2.js" async> </script>
+	<script src="waluty.js" async> </script>
+	<script src="lista.js" async> </script>
+	<script src="kalkulator.js" async> </script>
+
+
+	<main>
+
+		<section class="kontent">
+		
+			<div class="container">
+
+					<header>
+
+
+						<!-- <div>   <script type="text/javascript">
+							baseUrl = "https://widgets.cryptocompare.com/";
+							var scripts = document.getElementsByTagName("script");
+							var embedder = scripts[ scripts.length - 1 ];
+							var cccTheme = {"General":{"background":"#F8F9FB"}};
+							(function (){
+							var appName = encodeURIComponent(window.location.hostname);
+							if(appName==""){appName="local";}
+							var s = document.createElement("script");
+							s.type = "text/javascript";
+							s.async = true;
+							var theUrl = baseUrl+'serve/v1/coin/chartscroller?fsyms=BTC,ETH,LTC,XMR&tsyms=PLN';
+							s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+							embedder.parentNode.appendChild(s);
+							})();
+							</script>
+							
+							</div> -->
+
+				  
+							
+						<nav class="navbar navbar-expand-sm navbar navbar-light ";>
+									<a class="navbar-brand" href="#"><i class="fa fa-diamond"></i> Crypinfo</a>
+									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+									  <span class="navbar-toggler-icon"></span>
+									</button>
+									<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+									  <div class="navbar-nav">
+										<a class="nav-item nav-link active" href="#">Główna <span class="sr-only">(current)</span></a>
+										<a class="nav-item nav-link" href="#">Newsy</a>
+										<a class="nav-item nav-link" href="#">Alarmy</a>
+										<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Kontakt</a>
+									  
+										
+									</div>
+									</div>
+								
+								  </nav>
+				
+					</header>
+					
+			
+				<!-- gorna sekcja NAGLOWEK I KURSY FIAT -->
+
+				  <div class="col-12 bg-light" id="uphead" > 
+					
+					<div class="row">
+								
+						<div class="col-12 col-md-8"> 
+						<h3> Kursy Kryptowalut <br> </h3>
+						</div>
+				
+
+					
+
+					
+					<!-- kursy fiat-->
+					<div class="col-12 col-md-4 border-left" > 
+						<div class="row">
+							<div class="col-12" id="fiat"> 
+
+<div class="row"> 
+							<h6   class="col-6 col-md-3"> 	<i class="fa fa-eur" >   </i> Eur <span id="eur"></span>zł       </h6>
+							<h6  class="col-6 col-md-3" >			<i class="fa fa-usd"> </i>  Usd <span id="usd"> </span>zł    </h6>
+								<h6  class="col-6 col-md-3"  >		<i class="fa fa-gbp" > </i> Gbp <span id="gbp"> </span>zł  </h6>
+									<h6  class="col-6 col-md-3"  >		<i class="fa fa-bitcoin"> </i> Chf <span id="chf"> </span>zł  </h6>
+									
+								</div>
+									
+								</div>
+
+							
+							</div>
+
+
+
+
+					</div>
+							</div>		
+
+						
+							</div>
+						<!-- KONIEC GORNEJ SEKCJI -->
+
+
+
+				  <div class="row";>         
+				  <div class="col-md-8" id="leftbody">
+
+
+			
+					
+				          
+<!--TABELA-->
+
+	<div class="tabela table-responsive-lg table-bordered "  >  					
+<table class="table table-striped">
+	<thead>
+	  <tr>
+		<th style="color:chocolate"> Cryptocurrency</th>
+		<th style="color:chocolate">Price</th>
+		<th style="color:chocolate">24H Change</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+		<td scope="row">  <img src="icons/BTC.png">  BTC </td>
+	
+		<td><span id='BTCpln'> </span> zł <br>  </td>
+		<td id="procentbtc">
+			<span id='BTCpct'> </span>%
+			</td>
+	  </tr>
+	  <tr>
+		<td scope="row"><img src="icons/BCH.png"> BCH</td>
+		
+		<td><span id='BCHpln'>  </span> zł </td>
+		<td id="procentbch">   <span id='BCHpct'> </span>%    </td>
+	  </tr>
+	  <tr>
+		<td scope="row"><img src="icons/ETH.png"> ETH</td>
+		
+		<td ><span id='ETHpln'>   </span> zł</td>
+		<td id="procenteth">   <span id='ETHpct'> </span>%    </td>
+	  </tr>
+	  <tr>
+		  <td scope="row"><img src="icons/XMR.png"> XMR</td>
+		  
+		  <td><span id='XMRpln'> </span> zł </td>
+		  <td id="procentxmr">   <span id='XMRpct'> </span>%    </td>
+		</tr>
+		<tr>
+		  <td scope="row"><img src="icons/DASH.png"> DASH</th>
+		 
+		  <td><span id='DASHpln'>  </span> zł</td>
+		  <td id="procentdash">   <span id='DASHpct'> </span>%    </td>
+		</tr>
+		<tr>
+		  <td scope="row"><img src="icons/LTC.png"> LTC</td>
+		  
+		  <td><span id='LTCpln'>  </span> zł</td>
+		  <td id="procentltc">   <span id='LTCpct'> </span>%    </td>
+		</tr>
+		<tr>
+			<td scope="row"><img src="icons/ZEC.png"> ZEC</td>
+			
+			<td><span id='ZECpln'>  </span> zł</td>
+			<td id="procentzec">   <span id='ZECpct'> </span>%    </td>
+		  </tr>
+		  <tr>
+			<td scope="row"><img src="icons/DCR.png"> DCR</td>
+			
+			<td><span id='DCRpln'>  </span> zł</td>
+			<td id="procentdcr">   <span id='DCRpct'> </span>%    </td>
+		  </tr>
+
+		  <tr>
+			<td scope="row"><img src="icons/BNB.png"> BNB</td>
+			
+			<td><span id='BNBpln'>  </span> zł</td>
+			<td id="procentbnb">   <span id='BNBpct'> </span>%    </td>
+		  </tr>
+		<tr>
+			<td scope="row"><img src="icons/BTG.png"> BTG</td>
+		
+			<td><span id='BTGpln'>  </span> zł</td>
+			<td id="procentbtg">   <span id='BTGpct'> </span>%    </td>
+		  </tr>
+		  <tr>
+			<td scope="row"><img src="icons/LSK.png"> LSK</td>
+			
+			<td><span id='LSKpln'>  </span> zł</td>
+			<td id="procentlsk">   <span id='LSKpct'> </span>%    </td>
+		  </tr>
+
+		  <tr>
+			<td scope="row"><img src="icons/KNC.png"> KZC</td>
+			
+			<td><span id='KZCpln'>  </span> zł</td>
+			<td id="procentkzc">   <span id='KZCpct'> </span>%    </td>
+		  </tr>
+	
+	</tbody>
+	</table>
+</div>	
+</div>   		
+                    <!-- PRAWY PANEL  -->
+				<div class="col-md-4" id="righbody"> 
+			
+
+			<ul class="list-group">
+				<li class="list-group-item list-group-item-primary"><i class="fa fa-signal" > </i><b> Kapitalizacja: </b> <span id="kapitalizacja"> </span></li>
+				<!-- <li class="list-group-item ">Ilość Coinow:  <span id="ilosc_coinow"> </span>  </li> -->
+				<li class="list-group-item" style="color:green" ><i class="fa fa-bitcoin"> </i> Dominacja BTC:  <span id="btc_dominacja"> </span>%</li>
+				<li class="list-group-item"><i class="fa fa-money" > </i> Wolumen:  <span id="volume"> </span></li>
+			   
+			  </ul>
+		
+			  <br>
+ <!-- NEWS KARTA  -->
+
+					<div class="card bg-light">
+						<div class="card-header">    <h5> <i class="fa fa-newspaper-o  " > </i> Ostatni artykuł</h5>  </div>
+						<div class="card-body">
+							<img class="card-img-top img-fluid" style="max-width:50px;" id="img1" > 
+						  <p class="card-text" id="title1" > </p>
+						</div>
+						  <a id="url1"  class="btn btn-info"><i class="fa fa-newspaper-o  " > </i> Czytaj Dalej</a> 
+					  </div>
+
+
+					 <!-- KALKULATOR KARTA -->
+					 <br> 
+					  <div class="card bg-light">
+						<div class="card-header">  <h5> <i class="fa fa-calculator  " > </i> Kalkulator</h5>  </div>
+						<div class="card-body">
+							<div class="form-row">
+							<form action="" name="przelicznik">
+								<div class="row">   
+								  <h6 class="col-6" > Co chcesz przeliczyć:</h6>
+
+								<select name="co" class=" col-4 ">
+									<option name="BTC" value="BTC" class="cryp_calc">BTC</option>
+									<option name="ETH" value="ETH" class="cryp_calc">ETH</option>
+									<option name="XMR" value="XMR" class="cryp_calc">XMR</option>
+									<option name="DASH" value="DASH" class="cryp_calc">DASH</option>
+									<option name="LTC" value="LTC" class="cryp_calc">LTC</option>
+									<option name="BTG" value="BTG" class="cryp_calc">BTG</option>
+									<option name="LSK" value="LSK" class="cryp_calc">LSK</option>
+									<option disabled="disabled" >   ----- </option> <!-- rozdzielnik między krypto a fiatam--> 
+									<option name="PLN" value="PLN" class="fiat_calc">PLN</option>
+									<option name="EUR" value="EUR" class="fiat_calc">EUR</option>
+									<option name="USD" value="USD" class="fiat_calc">USD</option>
+
+
+								</select>
+								<input type="text" name="ile" class="form-control" placeholder="Ilość" />
+							</div>
+							<div class="row"> 
+										  <h6 class="col-6" > Na co chcesz przeliczyć:</h6>
+										  <select name="naCo" class="col-4">
+									<option name="PLN" value="PLN" class="fiat_calc">PLN</option>
+									<option name="EUR" value="EUR" class="fiat_calc">EUR</option>
+									<option name="USD" value="USD" class="fiat_calc">USD</option>
+									<option disabled="disabled" >   ----- </option> <!-- rozdzielnik między krypto a fiatam--> 
+									<option name="BTC" value="BTC" class="cryp_calc">BTC</option>					
+									<option name="ETH" value="ETH" class="cryp_calc">ETH</option>
+									<option name="XMR" value="XMR" class="cryp_calc">XMR</option>
+									<option name="DASH" value="DASH" class="cryp_calc">DASH</option>
+									<option name="LTC" value="LTC" class="cryp_calc">LTC</option>
+									<option name="BTG" value="BTG" class="cryp_calc">BTG</option>
+									<option name="LSK" value="LSK" class="cryp_calc">LSK</option>
+								   </select>
+
+								<input type="text" class="form-control" name="wynik" size="20" disabled="disabled" placeholder="="  /> 
+								
+							
+							</div>		
+						
+				</form> </div>
+						  </div>
+						  <a value="Przelicz jednostki" onClick="przeliczaj()" class="btn btn-info text-light"><i class="fa fa-calculator  " > </i> Oblicz</a>
+
+						</div>
+					
+					
+		
+					
+					
+</div>   <!-- KONIEC  PRAWY PANEL  -->
+
+
+<!--  Start panel dolny -->
+<div class="col-12"> 
+<div class="row">   	
+		<div class="col-12 col-md-12" >
+		<H4> Kilka słów o serwisie </H4>
+		<p> Nasza strona e-kursy-walut.pl pozwala w szybki i łatwy sposób sprawdzić aktualne notowania najważniejszych kryptowalut takich jak Bitcoin, czyli cyfrowy odpowiednik złota czy inne  internetowe waluty, które pojawiły się później m.in. Ethereum, Lisk, Litecoin, Zcash czy Monero.
+</p>
+<p> Nasza strona e-kursy-walut.pl pozwala w szybki i łatwy sposób sprawdzić aktualne notowania najważniejszych kryptowalut takich jak Bitcoin, czyli cyfrowy odpowiednik złota czy inne  internetowe waluty, które pojawiły się później m.in. Ethereum, Lisk, Litecoin, Zcash czy Monero.
+</p>
+<p> Nasza strona e-kursy-walut.pl pozwala w szybki i łatwy sposób sprawdzić aktualne notowania najważniejszych kryptowalut takich jak Bitcoin, czyli cyfrowy odpowiednik złota czy inne  internetowe waluty, które pojawiły się później m.in. Ethereum, Lisk, Litecoin, Zcash czy Monero.
+</p>
+			  </div>
+			</div>
+		  </div>
+		
+		
+
+			
+		</div> </div>
+
+</div>  
+<!-- Koniec panel dolny-->
+
+
+
+
+
+
+				  </div>  	 <!-- koniec row'a  bodi -->
+
+
+
+
+
+
+					 <!-- STOPKA  -->
+
+				<div class="col-12 bg-info" id="footer">
+
+Footer
+
+
+
+
+				</div>
+
+				</div>
+
+			
+
+
+			
+			
+		
+	</section>  
+		
+	</main>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	
+	<script src="js/bootstrap.min.js"></script>
+	
+
+	
+
+</body>
+</html>
