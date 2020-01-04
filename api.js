@@ -21,6 +21,7 @@ async function btcpln() {
 btcpln();
 
 
+ 
 
 
 const linkprice = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LSK,BTG,LTC,DASH,XMR,KZC&tsyms=BTC,USD,EUR,PLN,ETH";

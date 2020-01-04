@@ -126,6 +126,8 @@ let volume = glob[0].total_volume;     // wolumen z 24h
       var factor = Math.pow(10, k);
       return Math.round(n*factor)/factor;
 
+
+      
   }
   const btc_cut = data.RAW.BTC.PLN.CHANGEPCT24HOUR;
   const eth_cut = data.RAW.ETH.PLN.CHANGEPCT24HOUR;
