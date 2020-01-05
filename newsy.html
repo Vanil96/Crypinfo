@@ -25,12 +25,13 @@
 
 <body class="bg-light">
 	
-	<script src="api2.js" async> </script>
+
 	<script src="waluty.js" async> </script>
-	<script src="global_news.js" async> </script>
+	<script src="lista.js" async> </script>
 	<script src="kalkulator.js" async> </script>
 	<script src="globalinfo.js" async> </script>
-	
+	<script src="global_news.js" async> </script>
+
 
 	<main>
 
@@ -40,7 +41,6 @@
 
 					<header>
 
-				  
 							
 						<nav class="navbar navbar-expand-sm navbar navbar-light ";>
 									<a class="navbar-brand" href="#"><i class="fa fa-diamond"></i> Crypinfo</a>
@@ -49,8 +49,8 @@
 									</button>
 									<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 									  <div class="navbar-nav">
-										<a class="nav-item nav-link active" href="#">Główna <span class="sr-only">(current)</span></a>
-										<a class="nav-item nav-link" href="newsy.html">Newsy</a>
+										<a class="nav-item nav-link active" href="index.html">Główna <span class="sr-only">(current)</span></a>
+										<a class="nav-item nav-link" href="#">Newsy</a>
 										<a class="nav-item nav-link" href="#">Alarmy</a>
 										<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Kontakt</a>
 									  
@@ -108,104 +108,219 @@
 
 
 				  <div class="row";>         
-				  <div class="col-md-8" id="leftbody">
+				  <div class="col-md-8 bg-light" id="leftbody">
+
+<!-- karty z newsami -->
+					<div id="accordion">
+						<div class="card">
+						  <div class="card-header" id="headingOne">
+							<h5 class="mb-0">
+								<img  class="card-img-top img-fluid img-acordion" id="img1" > 
+								<span id="title1" class="text-primary" data-toggle="collapse" data-target="#collapseOne"> </span> <br>  
+							</h5>
+						  </div>
+					  
+						  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+							<div class="card-body" >
+							  <p id="body1"> </p>
+							  <a id="url1"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+							  <br> <small><b>Kategorie:</b> <span id="categories1"></span> </small>
+							</div>
+						  </div>
+						</div>
 
 
-			
+
+						<div class="card">
+							<div class="card-header" id="headingOne">
+							  <h5 class="mb-0">
+								  <img  class="card-img-top img-fluid img-acordion" id="img2" > 
+								  <span id="title2" class="text-primary" data-toggle="collapse" data-target="#collapse2"> </span> <br>  
+							  </h5>
+							</div>
+						
+							<div id="collapse2" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+							  <div class="card-body" >
+								<p id="body2"> </p>
+								<a id="url2"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+								<br> <small><b>Kategorie:</b> <span id="categories2"></span> </small>
+							  </div>
+							</div>
+
+						  </div>
 					
+
+						  <div class="card">
+							<div class="card-header" id="headingOne">
+							  <h5 class="mb-0">
+								  <img  class="card-img-top img-fluid img-acordion" id="img3" > 
+								  <span id="title3" class="text-primary" data-toggle="collapse" data-target="#collapse3"> </span> <br>  
+							  </h5>
+							</div>
+						
+							<div id="collapse3" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+							  <div class="card-body" >
+								<p id="body3"> </p>
+								<a id="url3"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+								<br> <small><b>Kategorie:</b> <span id="categories3"></span> </small>
+							  </div>
+							</div>
+
+						  </div>  
+
+
+
+
+						  <div class="card">
+							<div class="card-header" id="headingOne">
+							  <h5 class="mb-0">
+								  <img  class="card-img-top img-fluid img-acordion" id="img4" > 
+								  <span id="title4" class="text-primary" data-toggle="collapse" data-target="#collapse4"> </span> <br>  
+							  </h5>
+							</div>
+							
+							<div id="collapse4" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+							  <div class="card-body" >
+								<p id="body4"> </p>
+								<a id="url4"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+								<br> <small><b>Kategorie:</b> <span id="categories4"></span> </small>
+							  </div>
+							</div>
+							
+							</div> 
+
+			
+
+<div class="card">
+	<div class="card-header" id="headingOne">
+	  <h5 class="mb-0">
+		  <img  class="card-img-top img-fluid img-acordion" id="img5" > 
+		  <span id="title5" class="text-primary" data-toggle="collapse" data-target="#collapse5"> </span> <br>  
+	  </h5>
+	</div>
+	
+	<div id="collapse5" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+	  <div class="card-body" >
+		<p id="body5"> </p>
+		<a id="url5"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+		<br> <small><b>Kategorie:</b> <span id="categories5"></span> </small>
+	  </div>
+	</div>
+	
+	</div> 				
+
+
+
+
+	<div class="card">
+		<div class="card-header" id="headingOne">
+		  <h5 class="mb-0">
+			  <img  class="card-img-top img-fluid img-acordion" id="img6" > 
+			  <span id="title6" class="text-primary" data-toggle="collapse" data-target="#collapse6"> </span> <br>  
+		  </h5>
+		</div>
+		
+		<div id="collapse6" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+		  <div class="card-body" >
+			<p id="body6"> </p>
+			<a id="url6"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+			<br> <small><b>Kategorie:</b> <span id="categories6"></span> </small>
+		  </div>
+		</div>
+		
+		</div> 
+
+
+		
+
+<div class="card">
+	<div class="card-header" id="headingOne">
+	  <h5 class="mb-0">
+		  <img  class="card-img-top img-fluid img-acordion" id="img7" > 
+		  <span id="title7" class="text-primary" data-toggle="collapse" data-target="#collapse7"> </span> <br>  
+	  </h5>
+	</div>
+	
+	<div id="collapse7" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+	  <div class="card-body" >
+		<p id="body7"> </p>
+		<a id="url7"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+		<br> <small><b>Kategorie:</b> <span id="categories7"></span> </small>
+	  </div>
+	</div>
+	
+	</div> 
+
+
+	
+
+<div class="card">
+	<div class="card-header" id="headingOne">
+	  <h5 class="mb-0">
+		  <img  class="card-img-top img-fluid img-acordion" id="img8" > 
+		  <span id="title8" class="text-primary" data-toggle="collapse" data-target="#collapse8"> </span> <br>  
+	  </h5>
+	</div>
+	
+	<div id="collapse8" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+	  <div class="card-body" >
+		<p id="body8"> </p>
+		<a id="url8"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+		<br> <small><b>Kategorie:</b> <span id="categories8"></span> </small>
+	  </div>
+	</div>
+	
+	</div> 
+
+
+
+	
+
+<div class="card">
+	<div class="card-header" id="headingOne">
+	  <h5 class="mb-0">
+		  <img  class="card-img-top img-fluid img-acordion" id="img9" > 
+		  <span id="title9" class="text-primary" data-toggle="collapse" data-target="#collapse9"> </span> <br>  
+	  </h5>
+	</div>
+	
+	<div id="collapse9" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+	  <div class="card-body" >
+		<p id="body9"> </p>
+		<a id="url9"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+		<br> <small><b>Kategorie:</b> <span id="categories9"></span> </small>
+	  </div>
+	</div>
+	
+	</div> 
+	
+
+	
+
+<div class="card">
+	<div class="card-header" id="headingOne">
+	  <h5 class="mb-0">
+		  <img  class="card-img-top img-fluid img-acordion" id="img10" > 
+		  <span id="title10" class="text-primary" data-toggle="collapse" data-target="#collapse10"> </span> <br>  
+	  </h5>
+	</div>
+	
+	<div id="collapse10" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+	  <div class="card-body" >
+		<p id="body10"> </p>
+		<a id="url10"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+		<br> <small><b>Kategorie:</b> <span id="categories10"></span> </small>
+	  </div>
+	</div>
+	
+	</div> 
+
+                                    
+					  </div>
 				          
-<!--TABELA-->
 
-	<div class="tabela table-responsive-lg table-bordered "  >  					
-<table class="table table-striped">
-	<thead>
-	  <tr>
-		<th style="color:chocolate"> Cryptocurrency</th>
-		<th style="color:chocolate">Price</th>
-		<th style="color:chocolate">24H Change</th>
-	  </tr>
-	</thead>
-	<tbody>
-	  <tr>
-		<td scope="row">  <img src="icons/BTC.png">  BTC </td>
-	
-		<td><span id='BTCpln'> </span> zł <br>  </td>
-		<td id="procentbtc">
-			<span id='BTCpct'> </span>%
-			</td>
-	  </tr>
-	  <tr>
-		<td scope="row"><img src="icons/BCH.png"> BCH</td>
-		
-		<td><span id='BCHpln'>  </span> zł </td>
-		<td id="procentbch">   <span id='BCHpct'> </span>%    </td>
-	  </tr>
-	  <tr>
-		<td scope="row"><img src="icons/ETH.png"> ETH</td>
-		
-		<td ><span id='ETHpln'>   </span> zł</td>
-		<td id="procenteth">   <span id='ETHpct'> </span>%    </td>
-	  </tr>
-	  <tr>
-		  <td scope="row"><img src="icons/XMR.png"> XMR</td>
-		  
-		  <td><span id='XMRpln'> </span> zł </td>
-		  <td id="procentxmr">   <span id='XMRpct'> </span>%    </td>
-		</tr>
-		<tr>
-		  <td scope="row"><img src="icons/DASH.png"> DASH</th>
-		 
-		  <td><span id='DASHpln'>  </span> zł</td>
-		  <td id="procentdash">   <span id='DASHpct'> </span>%    </td>
-		</tr>
-		<tr>
-		  <td scope="row"><img src="icons/LTC.png"> LTC</td>
-		  
-		  <td><span id='LTCpln'>  </span> zł</td>
-		  <td id="procentltc">   <span id='LTCpct'> </span>%    </td>
-		</tr>
-		<tr>
-			<td scope="row"><img src="icons/ZEC.png"> ZEC</td>
-			
-			<td><span id='ZECpln'>  </span> zł</td>
-			<td id="procentzec">   <span id='ZECpct'> </span>%    </td>
-		  </tr>
-		  <tr>
-			<td scope="row"><img src="icons/DCR.png"> DCR</td>
-			
-			<td><span id='DCRpln'>  </span> zł</td>
-			<td id="procentdcr">   <span id='DCRpct'> </span>%    </td>
-		  </tr>
 
-		  <tr>
-			<td scope="row"><img src="icons/BNB.png"> BNB</td>
-			
-			<td><span id='BNBpln'>  </span> zł</td>
-			<td id="procentbnb">   <span id='BNBpct'> </span>%    </td>
-		  </tr>
-		<tr>
-			<td scope="row"><img src="icons/BTG.png"> BTG</td>
-		
-			<td><span id='BTGpln'>  </span> zł</td>
-			<td id="procentbtg">   <span id='BTGpct'> </span>%    </td>
-		  </tr>
-		  <tr>
-			<td scope="row"><img src="icons/LSK.png"> LSK</td>
-			
-			<td><span id='LSKpln'>  </span> zł</td>
-			<td id="procentlsk">   <span id='LSKpct'> </span>%    </td>
-		  </tr>
 
-		  <tr>
-			<td scope="row"><img src="icons/KNC.png"> KZC</td>
-			
-			<td><span id='KZCpln'>  </span> zł</td>
-			<td id="procentkzc">   <span id='KZCpct'> </span>%    </td>
-		  </tr>
-	
-	</tbody>
-	</table>
-</div>	
 </div>   		
                     <!-- PRAWY PANEL  -->
 				<div class="col-md-4" id="righbody"> 
@@ -230,6 +345,7 @@
 	</div>
 	  <a id="url"  class="btn btn-info"><i class="fa fa-newspaper-o  " > </i> Czytaj Dalej</a> 
   </div>
+
 
 
 					 <!-- KALKULATOR KARTA -->
@@ -345,7 +461,7 @@ Footer
 
 
 			
-					
+			
 		
 	</section>  
 		

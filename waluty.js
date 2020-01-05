@@ -15,15 +15,10 @@ async function waluty_fiat() {
   const chf_price = data[0].rates[9].mid;
   const gbp_price = data[0].rates[10].mid;
 
+  localStorage.setItem('data1', gbp_price);
 
-if (data[0].rates[10].mid>5) {
-alert('wieksze od 5')
 
-}
 
-else {
-  alert('mniejsze od 5')
-}
 
 
 // skraca liczbe do dwoch miejsc po przecinku

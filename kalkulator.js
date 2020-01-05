@@ -8,12 +8,11 @@ const api_fiat = "http://api.nbp.pl/api/exchangerates/tables/A/?format=json";
 
 
 
-
+var data1 = localStorage.getItem('data1');
 
 
 async function przeliczaj() {
-   
-   
+      
    
     //laczenie api
     const response = await fetch(api_cryp);    //api Crypto
@@ -137,6 +136,6 @@ var krok2;
 
 
 
-
+      
 
 

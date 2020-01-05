@@ -4,7 +4,7 @@ body
 	
 	color: #633a3a;
     font-family: 'Open Sans', sans-serif;
-	font-size: 18px;
+	
 	
 }
 
@@ -43,6 +43,7 @@ height: auto;
 #leftbody{
 height: auto;
 
+
 }
 
 
@@ -60,8 +61,8 @@ border-top:5px,solid,red;
 }
 
 .card img{
-	min-width:80px;
-	max-width: 140px;
+	
+	max-width: 65px;
 	margin:0 auto;
     
 }
@@ -110,3 +111,29 @@ display: inline;
 font-size: medium;
 
 }
+
+.img-acordion{
+float:left;
+
+
+}
+
+
+
+<div class="card">
+<div class="card-header" id="headingOne">
+  <h5 class="mb-0">
+	  <img  class="card-img-top img-fluid img-acordion" id="img^" > 
+	  <span id="title^" class="text-primary" data-toggle="collapse" data-target="#collapse^"> </span> <br>  
+  </h5>
+</div>
+
+<div id="collapse^" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+  <div class="card-body" >
+	<p id="body^"> </p>
+	<a id="url^"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+	<br> <small><b>Kategorie:</b> <span id="categories^"></span> </small>
+  </div>
+</div>
+
+</div>   
