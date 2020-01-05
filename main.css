@@ -1,32 +1,25 @@
 body
 {
-	
-	
-	color: #633a3a;
-    font-family: 'Open Sans', sans-serif;
-	
-	
+font-family: 'Open Sans', sans-serif;
+
 }
 
 
 .kontent
 {
-	text-align: center;
+	text-align: center;	
 	
 }
 
-.kontent img
-{
-	width: 100%;
-	height: auto;
-	
+header{
+padding-bottom: 30px;
+
 }
 
-.kontent p
-{
-	margin-bottom: 30px;
+#down_panel p    /* dolny panel, akapit */
+{ 
+	margin-bottom: 35px;	
 }
-
 .kontent figcaption
 {
 	margin-top: 8px;
@@ -34,15 +27,12 @@ body
 
 #uphead{
 height: auto;
-
-
-
+padding-bottom: 30px;
 
 }
 
 #leftbody{
 height: auto;
-
 
 }
 
@@ -57,15 +47,8 @@ height: auto;
 background-color: #181C30;
 border-top:5px,solid,red;
 
-
 }
 
-.card img{
-	
-	max-width: 65px;
-	margin:0 auto;
-    
-}
 
 
 .tabela img{
@@ -96,44 +79,31 @@ font-weight: bold;
 }
 
 
-#fiat h6{
+#fiat h6{                /* fiat currency */
 	font-weight: bold;
-
-}
-
-#belka-fiat h5{
-
-display: inline;
+	
 }
 
 
-#info_card{
+
+#info_card{        
 font-size: medium;
 
 }
 
-.img-acordion{
-float:left;
-
-
+#lastnews img{         /* img lastnews */
+max-width: 65px;  
 }
 
 
+#accordion img{    /* img acordion (news)  */
+float:left;
+max-width: 65px;  
+}
 
-<div class="card">
-<div class="card-header" id="headingOne">
-  <h5 class="mb-0">
-	  <img  class="card-img-top img-fluid img-acordion" id="img^" > 
-	  <span id="title^" class="text-primary" data-toggle="collapse" data-target="#collapse^"> </span> <br>  
-  </h5>
-</div>
+.title {               /* title news  */
+cursor: pointer
+ }
 
-<div id="collapse^" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
-  <div class="card-body" >
-	<p id="body^"> </p>
-	<a id="url^"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
-	<br> <small><b>Kategorie:</b> <span id="categories^"></span> </small>
-  </div>
-</div>
 
-</div>   
+

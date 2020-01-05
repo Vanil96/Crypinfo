@@ -5,20 +5,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
-	<title>Skoki narciarskie</title>
-	<meta name="description" content="Blog o skokach narciarskich">
-	<meta name="keywords" content="skoki narciarskie, skoczkowie, wyniki">
-	<meta name="author" content="Jan Kowalski">
+	<title>Crypinfo</title>
+	<meta name="description" content="Portal skupiający informacje odnośnie kryptowalut">
+	<meta name="keywords" content="kryptowaluty, bitcoin, newsy, kurs, klkulator ">
+	<meta name="author" content="Daniel Motyka">
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	
+		<!--  Bootstrap connection -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="main.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	
-	<!--[if lt IE 9]>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<![endif]-->
 
 	
 </head>
@@ -39,17 +37,15 @@
 			<div class="container">
 
 					<header>
-
-				  
-							
+	
 						<nav class="navbar navbar-expand-sm navbar navbar-light ";>
-									<a class="navbar-brand" href="#"><i class="fa fa-diamond"></i> Crypinfo</a>
+									<a class="navbar-brand" href="index.html"><i class="fa fa-diamond"></i> Crypinfo</a>
 									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 									  <span class="navbar-toggler-icon"></span>
 									</button>
 									<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 									  <div class="navbar-nav">
-										<a class="nav-item nav-link active" href="#">Główna <span class="sr-only">(current)</span></a>
+										<a class="nav-item nav-link active" href="index.html">Główna <span class="sr-only">(current)</span></a>
 										<a class="nav-item nav-link" href="newsy.html">Newsy</a>
 										<a class="nav-item nav-link" href="#">Alarmy</a>
 										<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Kontakt</a>
@@ -57,13 +53,11 @@
 										
 									</div>
 									</div>
-								
-								  </nav>
-				
-					</header>
-					
-			
-				<!-- gorna sekcja NAGLOWEK I KURSY FIAT -->
+								 </nav>
+ 
+								</header>
+
+				<!-- upper section -->
 
 				  <div class="col-12 bg-light" id="uphead" > 
 					
@@ -72,17 +66,14 @@
 						<div class="col-12 col-md-8"> 
 						<h3> Kursy Kryptowalut <br> </h3>
 						</div>
-				
-
 					
-
-					
-					<!-- kursy fiat-->
+					<!-- fiat values -->
 					<div class="col-12 col-md-4 border-left" > 
 						<div class="row">
 							<div class="col-12" id="fiat"> 
 
-<div class="row"> 
+
+								<div class="row"> 
 							<h6   class="col-6 col-md-3"> 	<i class="fa fa-eur" >   </i> Eur <span id="eur"></span>zł       </h6>
 							<h6  class="col-6 col-md-3" >			<i class="fa fa-usd"> </i>  Usd <span id="usd"> </span>zł    </h6>
 								<h6  class="col-6 col-md-3"  >		<i class="fa fa-gbp" > </i> Gbp <span id="gbp"> </span>zł  </h6>
@@ -91,30 +82,22 @@
 								</div>
 									
 								</div>
-
-							
 							</div>
-
-
-
-
 					</div>
 							</div>		
-
-						
 							</div>
-						<!-- KONIEC GORNEJ SEKCJI -->
+						<!-- EEND upper section -->
 
 
 
-				  <div class="row";>         
-				  <div class="col-md-8" id="leftbody">
+				  <div class="row";>   <!-- START ROW MIDDLE -->       
+				  <div class="col-md-8" id="leftbody"> <!--start LEFT PANEL -->
 
 
 			
 					
 				          
-<!--TABELA-->
+<!--TABLE-->
 
 	<div class="tabela table-responsive-lg table-bordered "  >  					
 <table class="table table-striped">
@@ -206,33 +189,33 @@
 	</tbody>
 	</table>
 </div>	
-</div>   		
-                    <!-- PRAWY PANEL  -->
+</div> <!-- << end table and left panel  -->
+                    <!-- RIGHT PANEL START  -->
 				<div class="col-md-4" id="righbody"> 
 			
-
+                <!-- GLOBAL STATISTIC -->
 			<ul class="list-group">
 				<li class="list-group-item list-group-item-primary"><i class="fa fa-signal" > </i><b> Kapitalizacja: </b> <span id="kapitalizacja"> </span></li>
 				<!-- <li class="list-group-item ">Ilość Coinow:  <span id="ilosc_coinow"> </span>  </li> -->
 				<li class="list-group-item" style="color:green" ><i class="fa fa-bitcoin"> </i> Dominacja BTC:  <span id="btc_dominacja"> </span>%</li>
 				<li class="list-group-item"><i class="fa fa-money" > </i> Wolumen:  <span id="volume"> </span></li>
 			   
-			  </ul>
+			  </ul> <!-- end -->
 		
 			  <br>
- <!-- NEWS KARTA  -->
+ <!-- NEWS CARD  -->
 
- <div class="card bg-light">
+ <div class="card bg-light"  id="lastnews">
 	<div class="card-header">    <h5> <i class="fa fa-newspaper-o  " > </i> Ostatni artykuł</h5>  </div>
 	<div class="card-body">
 		<img class="card-img-top img-fluid"  id="img" > 
 	  <p class="card-text" id="title" > </p>
 	</div>
 	  <a id="url"  class="btn btn-info"><i class="fa fa-newspaper-o  " > </i> Czytaj Dalej</a> 
-  </div>
+  </div>  <!--END NEWS CARD  -->
 
 
-					 <!-- KALKULATOR KARTA -->
+					 <!-- Calculator Card -->
 					 <br> 
 					  <div class="card bg-light">
 						<div class="card-header">  <h5> <i class="fa fa-calculator  " > </i> Kalkulator</h5>  </div>
@@ -284,19 +267,19 @@
 						  </div>
 						  <a value="Przelicz jednostki" onClick="przeliczaj()" class="btn btn-info text-light"><i class="fa fa-calculator  " > </i> Oblicz</a>
 
-						</div>
+						</div>  <!-- End calculator -->
 					
 					
 		
 					
 					
-</div>   <!-- KONIEC  PRAWY PANEL  -->
+</div>   <!-- END RIGHT PANEL  -->
 
 
-<!--  Start panel dolny -->
+<!--  start down panel  -->
 <div class="col-12"> 
 <div class="row">   	
-		<div class="col-12 col-md-12" >
+		<div class="col-12 col-md-12" id="down_panel" >
 		<H4> Kilka słów o serwisie </H4>
 		<p> Nasza strona e-kursy-walut.pl pozwala w szybki i łatwy sposób sprawdzić aktualne notowania najważniejszych kryptowalut takich jak Bitcoin, czyli cyfrowy odpowiednik złota czy inne  internetowe waluty, które pojawiły się później m.in. Ethereum, Lisk, Litecoin, Zcash czy Monero.
 </p>
@@ -306,29 +289,17 @@
 </p>
 			  </div>
 			</div>
-		  </div>
+		  </div>  <!-- End down panel -->
 		
-		
 
-			
-		</div> </div>
-
-</div>  
-<!-- Koniec panel dolny-->
+</div>  <!-- end row MIDDLE-->
 
 
 
 
 
 
-				  </div>  	 <!-- koniec row'a  bodi -->
-
-
-
-
-
-
-					 <!-- STOPKA  -->
+					 <!-- Footer  -->
 
 				<div class="col-12 bg-info" id="footer">
 
@@ -337,15 +308,11 @@ Footer
 
 
 
-				</div>
+				</div>  <!-- end footer  -->
 
-				</div>
+				</div> <!-- end container -->
 
-			
-
-
-			
-					
+						
 		
 	</section>  
 		
