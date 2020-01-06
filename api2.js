@@ -5,8 +5,8 @@
 
 // #F8F9FB  -bg light kolor
 
-const hrf_priceall = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,XMR,LTC,DASH,BTG,LSK,KZC,BCH,ZEC,DCR,BNB&tsyms=USD,PLN";
-const hrf_ticker = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LSK,BTG,LTC,DASH,XMR,KZC,BCH,ZEC,DCR,BNB&tsyms=PLN";
+const hrf_priceall = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,XMR,LTC,DASH,BTG,LSK,BCH,ZEC,DCR,BNB,ETC&tsyms=USD,PLN";
+const hrf_ticker = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LSK,BTG,LTC,DASH,XMR,BCH,ZEC,DCR,BNB,ETC&tsyms=PLN";
 
 async function prices() {
 
@@ -56,10 +56,10 @@ document.getElementById('DASHpln').textContent = data.DASH.PLN;
 document.getElementById('XMRpln').textContent = data.XMR.PLN;
 //document.getElementById('XMReur').textContent = data.XMR.EUR;
 
-//KZC
-document.getElementById('KZCpln').textContent = data.KZC.PLN;
-//document.getElementById('KZCusd').textContent = data.KZC.USD;
-//document.getElementById('KZCeur').textContent = data.KZC.EUR;
+//ETC
+document.getElementById('ETCpln').textContent = data.ETC.PLN;
+//document.getElementById('ETCusd').textContent = data.ETC.USD;
+//document.getElementById('ETCeur').textContent = data.ETC.EUR;
 
 
 //BCH
@@ -91,19 +91,24 @@ async function procenty() {
   const data = await response.json();
 
   
+//kapitalizacja       //'de-DE' jezyk niemiecki oddziela części dziesiętne przecinkiem, a tysiące kropką
+document.getElementById('mkcap_btc').textContent = data.RAW.BTC.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' }); 
+document.getElementById('mkcap_bch').textContent = data.RAW.BCH.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
+document.getElementById('mkcap_eth').textContent = data.RAW.ETH.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
+document.getElementById('mkcap_xmr').textContent = data.RAW.XMR.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
+document.getElementById('mkcap_dash').textContent = data.RAW.DASH.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
+document.getElementById('mkcap_ltc').textContent = data.RAW.LTC.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
+document.getElementById('mkcap_zec').textContent = data.RAW.ZEC.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
+document.getElementById('mkcap_dcr').textContent = data.RAW.DCR.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
+document.getElementById('mkcap_bnb').textContent = data.RAW.BNB.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
+document.getElementById('mkcap_btg').textContent = data.RAW.BTG.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
+document.getElementById('mkcap_etc').textContent = data.RAW.ETC.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
+document.getElementById('mkcap_lsk').textContent = data.RAW.LSK.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
 
-
-  
-  
-  
-  // BITCOIN LOGS
-  console.log(data.RAW.BTC.USD.MKTCAP);    // market place - kapitalizacja 24h
+ 
+// BITCOIN LOGS
+  console.log(data.RAW.BTC.USD.VOLUME24HOUR);  // WOLUMEN 24H
   console.log(data.RAW.BTC.PLN.CHANGEPCT24HOUR); // zmiana 24h
-
-
-  
-
-
 
 
    // funkcja ucinajaca liczby po przecinku + green color gdy dodatnia, red gdy ujemna
@@ -126,7 +131,7 @@ async function procenty() {
   const zec_cut = data.RAW.ZEC.PLN.CHANGEPCT24HOUR;
   const dcr_cut = data.RAW.DCR.PLN.CHANGEPCT24HOUR;
   const bnb_cut = data.RAW.BNB.PLN.CHANGEPCT24HOUR;
-  const kzc_cut = data.RAW.KZC.PLN.CHANGEPCT24HOUR;
+  const etc_cut = data.RAW.ETC.PLN.CHANGEPCT24HOUR;
 
   const btc_pct = (Round(btc_cut, 2));
   const eth_pct = (Round(eth_cut, 2));
@@ -139,12 +144,10 @@ async function procenty() {
   const zec_pct = (Round(zec_cut, 2));
   const dcr_pct = (Round(dcr_cut, 2));
   const bnb_pct = (Round(bnb_cut, 2));
-  const kzc_pct = (Round(kzc_cut, 2));
+  const etc_pct = (Round(etc_cut, 2));
 
  
 //kolorowanie tekstu
-
-
 
  if (btc_pct>0) { document.getElementById('procentbtc').setAttribute("style", "color:green;") }
 else {
@@ -189,9 +192,9 @@ else {
   }  ;
 
 
-  if (kzc_pct>0) { document.getElementById('procentkzc').setAttribute("style", "color:green;"); }
+  if (etc_pct>0) { document.getElementById('procentetc').setAttribute("style", "color:green;"); }
   else {
-    document.getElementById('procentkzc').setAttribute("style", "color:#cf596f;");
+    document.getElementById('procentetc').setAttribute("style", "color:#cf596f;");
 
   }  ;
 
@@ -222,6 +225,8 @@ else {
 
   }  ;
 
+
+
 //wyslanie do htmla
 document.getElementById('BTCpct').textContent = btc_pct;
 document.getElementById('ETHpct').textContent = eth_pct;
@@ -231,7 +236,7 @@ document.getElementById('DASHpct').textContent = dash_pct;
 document.getElementById('BTGpct').textContent = btg_pct;
 document.getElementById('LSKpct').textContent = lsk_pct;
 
-document.getElementById('KZCpct').textContent = kzc_pct;
+document.getElementById('ETCpct').textContent = etc_pct;
 document.getElementById('BCHpct').textContent = bch_pct;
 document.getElementById('ZECpct').textContent = zec_pct;
 document.getElementById('DCRpct').textContent = dcr_pct;

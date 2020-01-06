@@ -63,21 +63,21 @@
 					
 					<div class="row">
 								
-						<div class="col-12 col-md-8"> 
+						<div class="col-12 col-md-8 order-2 order-md-1 "> 
 						<h3> Kursy Kryptowalut <br> </h3>
 						</div>
 					
 					<!-- fiat values -->
-					<div class="col-12 col-md-4 border-left" > 
+					<div class="col-12 col-md-4 border-left order-1 order-md-2"> 
 						<div class="row">
 							<div class="col-12" id="fiat"> 
 
-
+                                      <h5 class="text-primary"  style="padding-bottom:10px;" > <i class="fa fa-globe" >   </i> Waluty tradycyjne </h5> 
 								<div class="row"> 
-							<h6   class="col-6 col-md-3"> 	<i class="fa fa-eur" >   </i> Eur <span id="eur"></span>zł       </h6>
-							<h6  class="col-6 col-md-3" >			<i class="fa fa-usd"> </i>  Usd <span id="usd"> </span>zł    </h6>
-								<h6  class="col-6 col-md-3"  >		<i class="fa fa-gbp" > </i> Gbp <span id="gbp"> </span>zł  </h6>
-									<h6  class="col-6 col-md-3"  >		<i class="fa fa-bitcoin"> </i> Chf <span id="chf"> </span>zł  </h6>
+							<h6   class="col-6 col-md-3"> 	<img src="img/eur.png" class="img-fiat"> Eur <span id="eur" ></span>zł       </h6>
+							<h6  class="col-6 col-md-3" >			<img src="img/usd.png" class="img-fiat"> Usd <span id="usd"> </span>zł    </h6>
+								<h6  class="col-6 col-md-3"  >		<img src="img/gbp.png" class="img-fiat"> Gbp <span id="gbp"> </span>zł  </h6>
+									<h6  class="col-6 col-md-3"  >		<img src="img/chf.png" class="img-fiat">  Chf <span id="chf"> </span>zł  </h6>
 									
 								</div>
 									
@@ -99,92 +99,109 @@
 				          
 <!--TABLE-->
 
-	<div class="tabela table-responsive-lg table-bordered "  >  					
+	<div class="tabela table-responsive-lg  "  >  					
 <table class="table table-striped">
 	<thead>
 	  <tr>
-		<th style="color:chocolate"> Cryptocurrency</th>
-		<th style="color:chocolate">Price</th>
-		<th style="color:chocolate">24H Change</th>
+		<th  ><i class="fa fa-list-ul">  </i> Lista</th>
+		<th ><i class="fa fa-money"> </i> Cena</th>
+		<th ><i class="fa fa-percent"> </i> Zmiana(24h) </th>
+		<th class="d-none d-lg-block" > <i class="fa fa-bank"> </i> Kapitalizacja </th>
 	  </tr>
 	</thead>
 	<tbody>
 	  <tr>
-		<td scope="row">  <img src="icons/BTC.png">  BTC </td>
+		<td scope="row"> 
+		
+	 <img src="icons/BTC.png">  BTC    </td>
 	
 		<td><span id='BTCpln'> </span> zł <br>  </td>
 		<td id="procentbtc">
 			<span id='BTCpct'> </span>%
 			</td>
+
+			<td class="d-none d-lg-block" > <span id="mkcap_btc" class="mk_cap"> MkCap </span>  </td>
 	  </tr>
 	  <tr>
 		<td scope="row"><img src="icons/BCH.png"> BCH</td>
 		
 		<td><span id='BCHpln'>  </span> zł </td>
 		<td id="procentbch">   <span id='BCHpct'> </span>%    </td>
-	  </tr>
+		<td class="d-none d-lg-block" > <span id="mkcap_bch" class="mk_cap"> MkCap </span>  </td>
+	</tr>
 	  <tr>
 		<td scope="row"><img src="icons/ETH.png"> ETH</td>
 		
 		<td ><span id='ETHpln'>   </span> zł</td>
 		<td id="procenteth">   <span id='ETHpct'> </span>%    </td>
-	  </tr>
+		<td class="d-none d-lg-block" > <span id="mkcap_eth" class="mk_cap"> MkCap </span>  </td>
+	</tr>
 	  <tr>
 		  <td scope="row"><img src="icons/XMR.png"> XMR</td>
 		  
 		  <td><span id='XMRpln'> </span> zł </td>
 		  <td id="procentxmr">   <span id='XMRpct'> </span>%    </td>
+		  <td class="d-none d-lg-block" > <span id="mkcap_xmr" class="mk_cap"> MkCap </span>  </td>
 		</tr>
 		<tr>
 		  <td scope="row"><img src="icons/DASH.png"> DASH</th>
 		 
 		  <td><span id='DASHpln'>  </span> zł</td>
 		  <td id="procentdash">   <span id='DASHpct'> </span>%    </td>
+		  <td class="d-none d-lg-block" > <span id="mkcap_dash" class="mk_cap"> MkCap </span>  </td>
 		</tr>
 		<tr>
 		  <td scope="row"><img src="icons/LTC.png"> LTC</td>
 		  
 		  <td><span id='LTCpln'>  </span> zł</td>
 		  <td id="procentltc">   <span id='LTCpct'> </span>%    </td>
+		  <td class="d-none d-lg-block" > <span id="mkcap_ltc" class="mk_cap"> MkCap </span>  </td>
 		</tr>
 		<tr>
 			<td scope="row"><img src="icons/ZEC.png"> ZEC</td>
 			
 			<td><span id='ZECpln'>  </span> zł</td>
 			<td id="procentzec">   <span id='ZECpct'> </span>%    </td>
-		  </tr>
+			<td class="d-none d-lg-block" > <span id="mkcap_zec" class="mk_cap"> MkCap </span>  </td>
+		</tr>
 		  <tr>
 			<td scope="row"><img src="icons/DCR.png"> DCR</td>
 			
 			<td><span id='DCRpln'>  </span> zł</td>
 			<td id="procentdcr">   <span id='DCRpct'> </span>%    </td>
-		  </tr>
+			<td class="d-none d-lg-block" > <span id="mkcap_dcr" class="mk_cap"> MkCap </span>  </td>
+		</tr>
 
 		  <tr>
 			<td scope="row"><img src="icons/BNB.png"> BNB</td>
 			
 			<td><span id='BNBpln'>  </span> zł</td>
 			<td id="procentbnb">   <span id='BNBpct'> </span>%    </td>
-		  </tr>
+			<td class="d-none d-lg-block" > <span id="mkcap_bnb" class="mk_cap"> MkCap </span>  </td>
+		</tr>
 		<tr>
 			<td scope="row"><img src="icons/BTG.png"> BTG</td>
 		
 			<td><span id='BTGpln'>  </span> zł</td>
 			<td id="procentbtg">   <span id='BTGpct'> </span>%    </td>
-		  </tr>
+			<td class="d-none d-lg-block" > <span id="mkcap_btg" class="mk_cap"> MkCap </span>  </td>
+		</tr>
+		
+		<tr>
+			<td scope="row"><img src="icons/ETC.png"> ETC</td>
+			
+			<td><span id='ETCpln'>  </span> zł</td>
+			<td id="procentetc">   <span id='ETCpct'> </span>%    </td>
+			<td class="d-none d-lg-block" > <span id="mkcap_etc" class="mk_cap"> MkCap </span>  </td>
+		</tr>
 		  <tr>
 			<td scope="row"><img src="icons/LSK.png"> LSK</td>
 			
 			<td><span id='LSKpln'>  </span> zł</td>
 			<td id="procentlsk">   <span id='LSKpct'> </span>%    </td>
-		  </tr>
+			<td class="d-none d-lg-block" > <span id="mkcap_lsk" class="mk_cap"> MkCap </span>  </td>
+		</tr>
 
-		  <tr>
-			<td scope="row"><img src="icons/KNC.png"> KZC</td>
-			
-			<td><span id='KZCpln'>  </span> zł</td>
-			<td id="procentkzc">   <span id='KZCpct'> </span>%    </td>
-		  </tr>
 	
 	</tbody>
 	</table>

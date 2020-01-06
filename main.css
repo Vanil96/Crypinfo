@@ -58,12 +58,19 @@ max-width:35px;
 
 
 }
+.tabela th{
+	color:chocolate;
+}
 
 .tabela span{
 font-weight: bold;
 }
 
+.img-fiat{
+max-width: 20px;
 
+
+}
 
 
 .cryp_calc{
@@ -126,10 +133,7 @@ max-width: 80px;
 
 }
 
-#head-indyvidualpage h1{
 
-
-}
 
 .jumbotron {               /* delete padding on bootstrap jumbotron  */
 		padding-top: 20px;
@@ -137,10 +141,7 @@ max-width: 80px;
   padding-left: 10px;
   }
 
-.jumbotron-ind h4, h5{
 
-
-}
     /* right side on jumbotron for <span>  */
 .jumb-right span{        
 
