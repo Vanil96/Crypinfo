@@ -16,7 +16,7 @@ padding-bottom: 30px;
 
 }
 
-#down_panel p    /* dolny panel, akapit */
+#down_panel p    
 { 
 	margin-bottom: 35px;	
 }
@@ -38,7 +38,7 @@ height: auto;
 
 
 #rightbody{
-height: auto;
+
 
 }
 
@@ -95,6 +95,21 @@ font-size: medium;
 max-width: 65px;  
 }
 
+#lastnews{                 
+margin-top:20px;
+
+}
+
+
+#calculator{
+	margin-top:20px;
+	
+	}
+
+#chart{
+		margin-top:20px;
+		
+		}	
 
 #accordion img{    /* img acordion (news)  */
 float:left;
@@ -102,8 +117,42 @@ max-width: 65px;
 }
 
 .title {               /* title news  */
-cursor: pointer
+cursor: pointer;
+
  }
 
+#head-indyvidualpage img{
+max-width: 80px;
+
+}
+
+#head-indyvidualpage h1{
 
 
+}
+
+.jumbotron {               /* delete padding on bootstrap jumbotron  */
+		padding-top: 20px;
+		padding-bottom: 0; 
+  padding-left: 10px;
+  }
+
+.jumbotron-ind h4, h5{
+
+
+}
+    /* right side on jumbotron for <span>  */
+.jumb-right span{        
+
+
+}
+                    /* right side on jumbotron for <span>  */
+.value-ind-right{
+	padding-left:10px;
+
+}
+
+.newsy-ind{
+padding-top:50px;
+
+}

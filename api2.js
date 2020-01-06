@@ -174,36 +174,36 @@ else {
 
   if (dash_pct>0) { document.getElementById('procentdash').setAttribute("style", "color:green;"); }
   else {
-    document.getElementById('procentdash').setAttribute("style", "color:red;");
+    document.getElementById('procentdash').setAttribute("style", "color:#cf596f;");
 
   }  ;
   if (btg_pct>0) { document.getElementById('procentbtg').setAttribute("style", "color:green;"); }
   else {
-    document.getElementById('procentbtg').setAttribute("style", "color:red;");
+    document.getElementById('procentbtg').setAttribute("style", "color:#cf596f;");
 
   }  ;
   if (lsk_pct>0) { document.getElementById('procentlsk').setAttribute("style", "color:green;"); }
   else {
-    document.getElementById('procentlsk').setAttribute("style", "color:red;");
+    document.getElementById('procentlsk').setAttribute("style", "color:#cf596f;");
 
   }  ;
 
 
   if (kzc_pct>0) { document.getElementById('procentkzc').setAttribute("style", "color:green;"); }
   else {
-    document.getElementById('procentkzc').setAttribute("style", "color:red;");
+    document.getElementById('procentkzc').setAttribute("style", "color:#cf596f;");
 
   }  ;
 
   if (bch_pct>0) { document.getElementById('procentbch').setAttribute("style", "color:green;"); }
   else {
-    document.getElementById('procentbch').setAttribute("style", "color:red;");
+    document.getElementById('procentbch').setAttribute("style", "color:#cf596f;");
 
   }  ;
 
   if (dcr_pct>0) { document.getElementById('procentdcr').setAttribute("style", "color:green;"); }
   else {
-    document.getElementById('procentdcr').setAttribute("style", "color:red;");
+    document.getElementById('procentdcr').setAttribute("style", "color:#cf596f;");
 
   }  ;
 
@@ -211,14 +211,14 @@ else {
 
   if (bnb_pct>0) { document.getElementById('procentbnb').setAttribute("style", "color:green;"); }
   else {
-    document.getElementById('procentbnb').setAttribute("style", "color:red;");
+    document.getElementById('procentbnb').setAttribute("style", "color:#cf596f;");
 
   }  ;
 
 
   if (zec_pct>0) { document.getElementById('procentzec').setAttribute("style", "color:green;"); }
   else {
-    document.getElementById('procentzec').setAttribute("style", "color:red;");
+    document.getElementById('procentzec').setAttribute("style", "color:#cf596f;");
 
   }  ;
 
