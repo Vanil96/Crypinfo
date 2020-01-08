@@ -15,7 +15,7 @@ async function waluty_fiat() {
   const chf_price = data[0].rates[9].mid;
   const gbp_price = data[0].rates[10].mid;
 
-  localStorage.setItem('data1', gbp_price);
+  //localStorage.setItem('data1', gbp_price);
 
 
 

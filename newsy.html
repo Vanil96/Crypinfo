@@ -28,7 +28,7 @@
 	<script src="lista.js" async> </script>
 	<script src="kalkulator.js" async> </script>
 	<script src="globalinfo.js" async> </script>
-	<script src="global_news.js" async> </script>
+	
 
 
 	<main>
@@ -72,7 +72,7 @@
 					<div class="col-12 col-md-4 border-left order-1 order-md-2"> 
 						<div class="row">
 							<div class="col-12" id="fiat"> 
-								<h5 class="text-primary" style="padding-bottom:10px;"> <i class="fa fa-globe" >   </i> Waluty tradycyjne </h5> 
+								<h5 class="text-primary" > <i class="fa fa-globe" >   </i> Waluty tradycyjne </h5> 
 
 								<div class="row"> 
 									<h6   class="col-6 col-md-3"> 	<img src="img/eur.png" class="img-fiat"> Eur <span id="eur" ></span>zł       </h6>
@@ -96,15 +96,34 @@
 
 <!-- karty z newsami -->
 					<div id="accordion">
+
+						<div class="card">
+							<div class="card-header" id="headingOne">
+							  <h5 class="mb-0">
+								  <img  class="card-img-top img-fluid img-acordion" id="img0" > 
+								  <span id="title0" class="text-primary title" data-toggle="collapse" data-target="#collapse0"> </span>   
+							  </h5>
+							</div>
+						
+							<div id="collapse0" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+							  <div class="card-body" >
+								<p id="body0"> </p>
+								<a id="url0"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+								<br> <span><b>Kategorie:</b> <span id="categories0"></span> </span>
+							  </div>
+							</div>
+						  </div>
+
+
 						<div class="card">
 						  <div class="card-header" id="headingOne">
 							<h5 class="mb-0">
 								<img  class="card-img-top img-fluid img-acordion" id="img1" > 
-								<span id="title1" class="text-primary title" data-toggle="collapse" data-target="#collapseOne"> </span>   
+								<span id="title1" class="text-primary title" data-toggle="collapse" data-target="#collapse1"> </span>   
 							</h5>
 						  </div>
 					  
-						  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+						  <div id="collapse1" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
 							<div class="card-body" >
 							  <p id="body1"> </p>
 							  <a id="url1"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
@@ -316,16 +335,53 @@
 					  </ul> <!-- end -->
 				
 					  
-		 <!-- NEWS CARD  -->
+		  	 <!-- Feed list card  -->
+
+
+
+			   <div class="card bg-light"  id="lastnews">
+				<div class="card-header">    <h5> <i class="fa fa-list-ul  " > </i> Źródła artykułów</h5>  </div>
 		
-		 <div class="card bg-light" id="lastnews" >
-			<div class="card-header">    <h5> <i class="fa fa-newspaper-o  " > </i> Ostatni artykuł</h5>  </div>
-			<div class="card-body">
-				<img class="card-img-top img-fluid"  id="img" > 
-			  <p class="card-text" id="title" > </p>
-			</div>
-			  <a id="url"  class="btn btn-info"><i class="fa fa-newspaper-o  " > </i> Czytaj Dalej</a> 
-		  </div>  <!--END NEWS CARD  -->
+<ul class="list-group" id="feed-list">
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed0" > 	<span id="feed0">  </span></li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image"  id="img_feed1" > 	<span id="feed1">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed2" > 	<span id="feed2">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed3" > 	<span id="feed3">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed4" > 	<span id="feed4">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed5" > 	<span id="feed5">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed6" > 	<span id="feed6">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed7" > 	<span id="feed7">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed8" > 	<span id="feed8">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed9" > 	<span id="feed9">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed10" > 	<span id="feed10">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed11" > 	<span id="feed11">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed12" > 	<span id="feed12">  </span> </li>
+
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed14" > 	<span id="feed14">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed15" > 	<span id="feed15">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed16" > 	<span id="feed16">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed17" > 	<span id="feed17">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed18" > 	<span id="feed18">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed19" > 	<span id="feed19">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed20" > 	<span id="feed20">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed21" > 	<span id="feed21">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed22" > 	<span id="feed22">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed23" > 	<span id="feed23">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed24" > 	<span id="feed24">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed25" > 	<span id="feed25">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed26" > 	<span id="feed26">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed27" > 	<span id="feed27">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed28" > 	<span id="feed28">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed29" > 	<span id="feed29">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed31" > 	<span id="feed31">  </span> </li>
+									<li class="list-group-item"><img class="card-img-top img-fluid" alt="feed_image" id="img_feed32" > 	<span id="feed32">  </span> </li>
+								
+								</ul>
+
+
+
+			  </div>  <!--END FEED CARD  -->
+
 		
 		
 							 <!-- Calculator Card -->
@@ -390,12 +446,12 @@
 		<div class="row">   	
 				<div class="col-12 col-md-12" id="down_panel" >
 				<H4> Kilka słów o serwisie </H4>
-				<p> Nasza strona e-kursy-walut.pl pozwala w szybki i łatwy sposób sprawdzić aktualne notowania najważniejszych kryptowalut takich jak Bitcoin, czyli cyfrowy odpowiednik złota czy inne  internetowe waluty, które pojawiły się później m.in. Ethereum, Lisk, Litecoin, Zcash czy Monero.
-		</p>
-		<p> Nasza strona e-kursy-walut.pl pozwala w szybki i łatwy sposób sprawdzić aktualne notowania najważniejszych kryptowalut takich jak Bitcoin, czyli cyfrowy odpowiednik złota czy inne  internetowe waluty, które pojawiły się później m.in. Ethereum, Lisk, Litecoin, Zcash czy Monero.
-		</p>
-		<p> Nasza strona e-kursy-walut.pl pozwala w szybki i łatwy sposób sprawdzić aktualne notowania najważniejszych kryptowalut takich jak Bitcoin, czyli cyfrowy odpowiednik złota czy inne  internetowe waluty, które pojawiły się później m.in. Ethereum, Lisk, Litecoin, Zcash czy Monero.
-		</p>
+				<p> Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
+				</p>
+				<p> Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
+				</p>
+				<p> Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
+				</p>
 					  </div>
 					</div>
 				  </div>  <!-- End down panel -->

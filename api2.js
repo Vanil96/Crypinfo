@@ -56,14 +56,16 @@ document.getElementById('DASHpln').textContent = data.DASH.PLN;
 document.getElementById('XMRpln').textContent = data.XMR.PLN;
 //document.getElementById('XMReur').textContent = data.XMR.EUR;
 
+//BCH
+document.getElementById('BCHpln').textContent = data.BCH.PLN;
+
 //ETC
 document.getElementById('ETCpln').textContent = data.ETC.PLN;
 //document.getElementById('ETCusd').textContent = data.ETC.USD;
 //document.getElementById('ETCeur').textContent = data.ETC.EUR;
 
 
-//BCH
-document.getElementById('BCHpln').textContent = data.BCH.PLN;
+
 
 //ZEC
 document.getElementById('ZECpln').textContent = data.ZEC.PLN;

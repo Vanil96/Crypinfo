@@ -24,7 +24,10 @@ padding-bottom: 30px;
 {
 	margin-top: 8px;
 }
+.fa-diamond{         /* icon from navbar*/
+color:rgb(0, 0, 255);
 
+}
 #uphead{
 height: auto;
 padding-bottom: 30px;
@@ -59,7 +62,7 @@ max-width:35px;
 
 }
 .tabela th{
-	color:chocolate;
+	color:rgb(76, 83, 146)
 }
 
 .tabela span{
@@ -86,19 +89,22 @@ font-weight: bold;
 }
 
 
-#fiat h6{                /* fiat currency */
-	font-weight: bold;
+
+
+  /* cards right side */
+
+ #fiat h5{                /* fiat currency h */
+	padding-bottom:10px;
 	
+
 }
-
-
 
 #info_card{        
 font-size: medium;
 
 }
 
-#lastnews img{         /* img lastnews */
+#lastnews img{         
 max-width: 65px;  
 }
 
@@ -107,9 +113,9 @@ margin-top:20px;
 
 }
 
-
 #calculator{
 	margin-top:20px;
+	margin-bottom:40px;
 	
 	}
 
@@ -118,42 +124,90 @@ margin-top:20px;
 		
 		}	
 
-#accordion img{    /* img acordion (news)  */
+
+ /* accordion news   */
+#accordion{        
+			padding-bottom: 40px;
+			
+			}
+#accordion img{   
 float:left;
 max-width: 65px;  
 }
 
-.title {               /* title news  */
+.title {              
 cursor: pointer;
 
  }
 
-#head-indyvidualpage img{
-max-width: 80px;
+
+
+  /* FEED LIST   */
+
+#feed-list{
+	height: 210px;
+	overflow:auto;
+	
+}
+
+#feed-list li{
+max-height: 100px;
+background-color: #F8F9FB;
+padding:3px;
 
 }
 
+#feed-list span{
+	color: black;
+}
+
+#feed-list img{
+	max-width:40px;
+	float:left;
+}
+
+/*INDYVIDUAL CRYP PAGE  */
+
+.newsy-ind{
+	padding-top:50px;
+	margin-bottom: 40px;
+	}
+
+.value-ind-right{
+		padding-left:10px;
+	
+	}
+
+#head-indyvidualpage img{
+		max-width: 80px;
+		
+		}	
 
 
-.jumbotron {               /* delete padding on bootstrap jumbotron  */
-		padding-top: 20px;
-		padding-bottom: 0; 
-  padding-left: 10px;
-  }
+.jumbotron {       /*  well  */
+	padding-top: 20px;
+	padding-bottom: 0; 
+	padding-left: 10px;
+	  }
 
-
-    /* right side on jumbotron for <span>  */
+  
 .jumb-right span{        
 
 
+	}	 
+	
+.jumbotron h6 {	     /*  naglowki dolne  */
+font-weight: bold;
 }
-                    /* right side on jumbotron for <span>  */
-.value-ind-right{
-	padding-left:10px;
 
-}
+#high_ind, #low_ind, #change_ind, #calc_ind{
+font-weight: bold;
 
-.newsy-ind{
-padding-top:50px;
+}	
+
+
+
+#kapital_ind, #wolumen_ind{ 
+	font-weight: bold;
 
 }
