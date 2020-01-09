@@ -73,13 +73,12 @@
 						<div class="row">
 							<div class="col-12" id="fiat"> 
 								<h5 class="text-primary" > <i class="fa fa-globe" >   </i> Waluty tradycyjne </h5> 
-
 								<div class="row"> 
-									<h6   class="col-6 col-md-3"> 	<img src="img/eur.png" class="img-fiat"> Eur <span id="eur" ></span>zł       </h6>
-									<h6  class="col-6 col-md-3" >			<img src="img/usd.png" class="img-fiat"> Usd <span id="usd"> </span>zł    </h6>
-										<h6  class="col-6 col-md-3"  >		<img src="img/gbp.png" class="img-fiat"> Gbp <span id="gbp"> </span>zł  </h6>
-											<h6  class="col-6 col-md-3"  >		<img src="img/chf.png" class="img-fiat">  Chf <span id="chf"> </span>zł  </h6>
-												
+									<div   class="col-6 col-md-3 currencies"> 	<img src="img/eur.png" class="img-fiat"> EUR <span id="eur" ></span>       </div>
+									<div  class="col-6 col-md-3 currencies" >			<img src="img/usd.png" class="img-fiat"> USD <span id="usd"> </span>   </div>
+										<div  class="col-6 col-md-3 currencies"  >		<img src="img/gbp.png" class="img-fiat"> GBP <span id="gbp"> </span>  </div>
+											<div  class="col-6 col-md-3 currencies"  >		<img src="img/chf.png" class="img-fiat">  CHF <span id="chf"> </span>  </div>
+													
 								</div>
 									
 								</div>
@@ -390,49 +389,52 @@
 								<div class="card-header">  <h5> <i class="fa fa-calculator  " > </i> Kalkulator</h5>  </div>
 								<div class="card-body">
 									<div class="form-row">
-									<form action="" name="przelicznik">
-										<div class="row">   
-										  <h6 class="col-6" > Co chcesz przeliczyć:</h6>
-		
-										<select name="co" class=" col-4 ">
-											<option name="BTC" value="BTC" class="cryp_calc">BTC</option>
-											<option name="ETH" value="ETH" class="cryp_calc">ETH</option>
-											<option name="XMR" value="XMR" class="cryp_calc">XMR</option>
-											<option name="DASH" value="DASH" class="cryp_calc">DASH</option>
-											<option name="LTC" value="LTC" class="cryp_calc">LTC</option>
-											<option name="BTG" value="BTG" class="cryp_calc">BTG</option>
-											<option name="LSK" value="LSK" class="cryp_calc">LSK</option>
-											<option disabled="disabled" >   ----- </option> <!-- rozdzielnik między krypto a fiatam--> 
-											<option name="PLN" value="PLN" class="fiat_calc">PLN</option>
-											<option name="EUR" value="EUR" class="fiat_calc">EUR</option>
-											<option name="USD" value="USD" class="fiat_calc">USD</option>
-		
-		
-										</select>
-										<input type="text" name="ile" class="form-control" placeholder="Ilość" />
-									</div>
-									<div class="row"> 
-												  <h6 class="col-6" > Na co chcesz przeliczyć:</h6>
-												  <select name="naCo" class="col-4">
-											<option name="PLN" value="PLN" class="fiat_calc">PLN</option>
-											<option name="EUR" value="EUR" class="fiat_calc">EUR</option>
-											<option name="USD" value="USD" class="fiat_calc">USD</option>
-											<option disabled="disabled" >   ----- </option> <!-- rozdzielnik między krypto a fiatam--> 
-											<option name="BTC" value="BTC" class="cryp_calc">BTC</option>					
-											<option name="ETH" value="ETH" class="cryp_calc">ETH</option>
-											<option name="XMR" value="XMR" class="cryp_calc">XMR</option>
-											<option name="DASH" value="DASH" class="cryp_calc">DASH</option>
-											<option name="LTC" value="LTC" class="cryp_calc">LTC</option>
-											<option name="BTG" value="BTG" class="cryp_calc">BTG</option>
-											<option name="LSK" value="LSK" class="cryp_calc">LSK</option>
-										   </select>
-		
-										<input type="text" class="form-control" name="wynik" size="20" disabled="disabled" placeholder="="  /> 
+										<form action="" name="przelicznik">
+											<div class="row">   
+											  <h6 class="col-6" > Co chcesz przeliczyć:</h6>
+			
+											<select name="co" class=" col-4 ">
+												<option name="PLN" value="PLN" class="fiat_calc">PLN</option>
+												<option name="EUR" value="EUR" class="fiat_calc">EUR</option>
+												<option name="USD" value="USD" class="fiat_calc">USD</option>
+												<option name="GBP" value="GBP" class="fiat_calc">GBP</option>
+												<option name="CHF" value="CHF" class="fiat_calc">CHF</option>
+												<option disabled="disabled" >   ----- </option> <!-- rozdzielnik między krypto a fiatam--> 
+												<option name="BTC" value="BTC" class="cryp_calc">BTC</option>					
+												<option name="ETH" value="ETH" class="cryp_calc">ETH</option>
+												<option name="XMR" value="XMR" class="cryp_calc">XMR</option>
+												<option name="DASH" value="DASH" class="cryp_calc">DASH</option>
+												<option name="LTC" value="LTC" class="cryp_calc">LTC</option>
+												<option name="BTG" value="BTG" class="cryp_calc">BTG</option>
+												<option name="LSK" value="LSK" class="cryp_calc">LSK</option>
+			
+											</select>
+											<input type="number" name="ile" class="form-control" placeholder="ilosc" value="100" />
+										</div>
+										<div class="row"> 
+													  <h6 class="col-6" > Na co chcesz przeliczyć:</h6>
+													  <select name="naCo" class="col-4">
+												<option name="BTC" value="BTC" class="cryp_calc">BTC</option>
+												<option name="ETH" value="ETH" class="cryp_calc">ETH</option>
+												<option name="XMR" value="XMR" class="cryp_calc">XMR</option>
+												<option name="DASH" value="DASH" class="cryp_calc">DASH</option>
+												<option name="LTC" value="LTC" class="cryp_calc">LTC</option>
+												<option name="BTG" value="BTG" class="cryp_calc">BTG</option>
+												<option name="LSK" value="LSK" class="cryp_calc">LSK</option>
+												<option disabled="disabled" >   ----- </option> <!-- rozdzielnik między krypto a fiatam--> 
+												<option name="PLN" value="PLN" class="fiat_calc">PLN</option>
+												<option name="EUR" value="EUR" class="fiat_calc">EUR</option>
+												<option name="USD" value="USD" class="fiat_calc">USD</option>
+												<option name="GBP" value="GBP" class="fiat_calc">GBP</option>
+												<option name="CHF" value="CHF" class="fiat_calc">CHF</option>
+											</select>
+			
+											<input type="text" class="form-control" name="wynik" size="20" disabled="disabled" placeholder="="  /> 
+											
 										
+										</div>		
 									
-									</div>		
-								
-						</form> </div>
+							</form> </div>
 								  </div>
 								  <a value="Przelicz jednostki" onClick="przeliczaj()" class="btn btn-info text-light"><i class="fa fa-calculator  " > </i> Oblicz</a>
 		

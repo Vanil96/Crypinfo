@@ -1,7 +1,9 @@
 
-
 async function newsy() {
-const response = await fetch('https://min-api.cryptocompare.com/data/v2/news/?lang=EN');
+let apikey="&api_key=a19ca4952f0fe76f7457c50e3df9029c473e710c3e29360c97d2afb621b25816";
+newsy_href= "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"+apikey;    
+
+const response = await fetch(newsy_href);
 const logi = await response.json();
 
 const news = logi.Data;
@@ -92,9 +94,11 @@ newsy();
 
 
 async function news_feeds() {
+
+
 const response = await fetch('https://min-api.cryptocompare.com/data/news/feeds');
 const logi = await response.json();
-console.log(logi);
+
     
 //     //title logs of feeds
 document.getElementById("feed0").textContent = logi[0].name;

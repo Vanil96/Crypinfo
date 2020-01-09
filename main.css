@@ -53,7 +53,6 @@ border-top:5px,solid,red;
 }
 
 
-
 .tabela img{
 width: auto;
 float:left;
@@ -67,12 +66,6 @@ max-width:35px;
 
 .tabela span{
 font-weight: bold;
-}
-
-.img-fiat{
-max-width: 20px;
-
-
 }
 
 
@@ -90,6 +83,21 @@ font-weight: bold;
 
 
 
+
+/* general currencies*/
+.img-fiat{
+max-width: 25px;
+}
+	
+#eur, #usd, #gbp, #chf{
+color: firebrick;
+}
+.currencies{
+	color:green;
+	font-weight:bold;
+}
+
+	
 
   /* cards right side */
 
@@ -173,18 +181,15 @@ padding:3px;
 	margin-bottom: 40px;
 	}
 
-.value-ind-right{
-		padding-left:10px;
-	
-	}
 
 #head-indyvidualpage img{
-		max-width: 80px;
+		max-width: 70px;
 		
-		}	
+}	
+		
 
-
-.jumbotron {       /*  well  */
+/* INDYVIDUAL PAGE - WELL (STUDNIA)  */
+.jumbotron {       
 	padding-top: 20px;
 	padding-bottom: 0; 
 	padding-left: 10px;
@@ -196,18 +201,54 @@ padding:3px;
 
 	}	 
 	
-.jumbotron h6 {	     /*  naglowki dolne  */
+.jumbotron h6 {	     
 font-weight: bold;
+}
+
+.value-ind-right{
+	padding-left:10px;
+
 }
 
 #high_ind, #low_ind, #change_ind, #calc_ind{
 font-weight: bold;
 
 }	
-
-
-
+#calc_ind{
+	color:rgb(41, 75, 110)
+}
+#high_ind{
+	color:green;
+}
+#low_ind{
+	color:red;
+}
 #kapital_ind, #wolumen_ind{ 
 	font-weight: bold;
 
+}
+
+#pricepln_ind{
+	font-size:xx-large; 
+	color:green; 
+	font-weight:bold;
+
+}
+
+#well_price span{
+	font-size:large; 
+	color: grey; 
+	font-weight:bold;
+}
+
+#well_general{
+
+}
+
+.fa-level-up{
+color:green;
+}
+
+.fa-level-down{
+color: red;
 }

@@ -4,9 +4,9 @@
 
 
 // #F8F9FB  -bg light kolor
-
-const hrf_priceall = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,XMR,LTC,DASH,BTG,LSK,BCH,ZEC,DCR,BNB,ETC&tsyms=USD,PLN";
-const hrf_ticker = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LSK,BTG,LTC,DASH,XMR,BCH,ZEC,DCR,BNB,ETC&tsyms=PLN";
+let apikey="&api_key=a19ca4952f0fe76f7457c50e3df9029c473e710c3e29360c97d2afb621b25816";
+const hrf_priceall = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,XMR,LTC,DASH,BTG,LSK,BCH,ZEC,DCR,BNB,ETC&tsyms=USD,PLN"+apikey;
+const hrf_ticker = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LSK,BTG,LTC,DASH,XMR,BCH,ZEC,DCR,BNB,ETC&tsyms=PLN"+apikey;
 
 async function prices() {
 
@@ -21,46 +21,46 @@ async function prices() {
 
 //BTC
 
-document.getElementById('BTCpln').textContent = data.BTC.PLN;
+document.getElementById('BTCpln').textContent = data.BTC.PLN+" zł";
 //document.getElementById('BTCusd').textContent = data.BTC.USD;
 //document.getElementById('BTCeur').textContent = data.BTC.EUR;
 
 
 
 //ETH
-document.getElementById('ETHpln').textContent = data.ETH.PLN;
+document.getElementById('ETHpln').textContent = data.ETH.PLN+" zł";
 //document.getElementById('ETHusd').textContent = data.ETH.USD;
 //document.getElementById('ETHeur').textContent = data.ETH.EUR;
 
 //LSK
-document.getElementById('LSKpln').textContent = data.LSK.PLN;
+document.getElementById('LSKpln').textContent = data.LSK.PLN+" zł";
 //document.getElementById('LSKusd').textContent = data.LSK.USD;
 //document.getElementById('LSKeur').textContent = data.LSK.EUR;
 
 //LTC
-document.getElementById('LTCpln').textContent = data.LTC.PLN;
+document.getElementById('LTCpln').textContent = data.LTC.PLN+" zł";
 //document.getElementById('LTCusd').textContent = data.LTC.USD;
 //document.getElementById('LTCeur').textContent = data.LTC.EUR;
 
 //BTG
-document.getElementById('BTGpln').textContent = data.BTG.PLN;
+document.getElementById('BTGpln').textContent = data.BTG.PLN+" zł";
 //document.getElementById('BTGusd').textContent = data.BTG.USD;
 //document.getElementById('BTGeur').textContent = data.BTG.EUR;
 
 //DASH
-document.getElementById('DASHpln').textContent = data.DASH.PLN;
+document.getElementById('DASHpln').textContent = data.DASH.PLN+" zł";
 //document.getElementById('DASHusd').textContent = data.DASH.USD;
 //document.getElementById('DASHeur').textContent = data.DASH.EUR;
 
 //XMR
-document.getElementById('XMRpln').textContent = data.XMR.PLN;
+document.getElementById('XMRpln').textContent = data.XMR.PLN+" zł";
 //document.getElementById('XMReur').textContent = data.XMR.EUR;
 
 //BCH
-document.getElementById('BCHpln').textContent = data.BCH.PLN;
+document.getElementById('BCHpln').textContent = data.BCH.PLN+" zł";
 
 //ETC
-document.getElementById('ETCpln').textContent = data.ETC.PLN;
+document.getElementById('ETCpln').textContent = data.ETC.PLN+" zł";
 //document.getElementById('ETCusd').textContent = data.ETC.USD;
 //document.getElementById('ETCeur').textContent = data.ETC.EUR;
 
@@ -68,13 +68,13 @@ document.getElementById('ETCpln').textContent = data.ETC.PLN;
 
 
 //ZEC
-document.getElementById('ZECpln').textContent = data.ZEC.PLN;
+document.getElementById('ZECpln').textContent = data.ZEC.PLN+" zł";
 
 //DCR
-document.getElementById('DCRpln').textContent = data.DCR.PLN;
+document.getElementById('DCRpln').textContent = data.DCR.PLN+" zł";
 
 //BNB
-document.getElementById('BNBpln').textContent = data.BNB.PLN;
+document.getElementById('BNBpln').textContent = data.BNB.PLN+" zł";
 
 
 
@@ -151,98 +151,72 @@ document.getElementById('mkcap_lsk').textContent = data.RAW.LSK.USD.MKTCAP.toLoc
  
 //kolorowanie tekstu
 
- if (btc_pct>0) { document.getElementById('procentbtc').setAttribute("style", "color:green;") }
-else {
-   document.getElementById('procentbtc').setAttribute("style", "color:red;");
+ if (btc_pct>0) { document.getElementById('BTCpct').setAttribute("style", "color:green;") }
+ else if(btc_pct<0){document.getElementById('BTCpct').setAttribute("style", "color:red;");}
+else {document.getElementById('BTCpct').setAttribute("style", "color:fiolet;");};
 
-  }  ;
+  if (eth_pct>0) { document.getElementById('ETHpct').setAttribute("style", "color:green;") }
+  else if(eth_pct<0) {document.getElementById('ETHpct').setAttribute("style", "color:red;");}
+  else {document.getElementById('ETHpct').setAttribute("style", "color:fiolet;");}  ;
 
+  if (xmr_pct>0) { document.getElementById('XMRpct').setAttribute("style", "color:green;"); }
+else if(xmr_pct<0){document.getElementById('XMRpct').setAttribute("style", "color:red;"); }
+else {document.getElementById('XMRpct').setAttribute("style", "color:fiolet;");}  ;
 
-  if (eth_pct>0) { document.getElementById('procenteth').setAttribute("style", "color:green;") }
-  else {
-    document.getElementById('procenteth').setAttribute("style", "color:red;");
+  if (ltc_pct>0) { document.getElementById('LTCpct').setAttribute("style", "color:green;"); }
+  else if(ltc_pct<0){document.getElementById('LTCpct').setAttribute("style", "color:red;"); }
+  else {document.getElementById('LTCpct').setAttribute("style", "color:fiolet;"); }  ;
 
-  }  ;
+  if (dash_pct>0) { document.getElementById('DASHpct').setAttribute("style", "color:green;"); }
+  else if(dash_pct<0){document.getElementById('DASHpct').setAttribute("style", "color:red;"); }
+  else {document.getElementById('DASHpct').setAttribute("style", "color:fiolet;");}  ;
 
-  if (xmr_pct>0) { document.getElementById('procentxmr').setAttribute("style", "color:green;"); }
-  else {
-    document.getElementById('procentxmr').setAttribute("style", "color:red;");
+  if (btg_pct>0) { document.getElementById('BTGpct').setAttribute("style", "color:green;"); }
+  else if(btg_pct<0) { document.getElementById('BTGpct').setAttribute("style", "color:red;");}
+  else {document.getElementById('BTGpct').setAttribute("style", "color:fiolet;");}  ;
+  
+  if (lsk_pct>0) { document.getElementById('LSKpct').setAttribute("style", "color:green;"); }
+  else if(lsk_pct<0){document.getElementById('LSKpct').setAttribute("style", "color:red;");}
+  else {document.getElementById('LSKpct').setAttribute("style", "color:fiolet;");}  ;
 
-  }  ;
+  if (etc_pct>0) { document.getElementById('ETCpct').setAttribute("style", "color:green;"); }
+else if(etc_pct<0){ document.getElementById('ETCpct').setAttribute("style", "color:red;");}
+  else { document.getElementById('ETCpct').setAttribute("style", "color:fiolet;"); }  ;
 
-  if (ltc_pct>0) { document.getElementById('procentltc').setAttribute("style", "color:green;"); }
-  else {
-    document.getElementById('procentltc').setAttribute("style", "color:red;");
+  if (bch_pct>0) { document.getElementById('BCHpct').setAttribute("style", "color:green;"); }
+else if(bch_pct<0) {document.getElementById('BCHpct').setAttribute("style", "color:red;");}
+  else {document.getElementById('BCHpct').setAttribute("style", "color:fiolet;");}  ;
 
-  }  ;
+  if (dcr_pct>0) { document.getElementById('DCRpct').setAttribute("style", "color:green;"); }
+  else if(dcr_pct<0){document.getElementById('DCRpct').setAttribute("style", "color:red;"); }
+  else {document.getElementById('DCRpct').setAttribute("style", "color:fiolet;");}  ;
 
-
-  if (dash_pct>0) { document.getElementById('procentdash').setAttribute("style", "color:green;"); }
-  else {
-    document.getElementById('procentdash').setAttribute("style", "color:#cf596f;");
-
-  }  ;
-  if (btg_pct>0) { document.getElementById('procentbtg').setAttribute("style", "color:green;"); }
-  else {
-    document.getElementById('procentbtg').setAttribute("style", "color:#cf596f;");
-
-  }  ;
-  if (lsk_pct>0) { document.getElementById('procentlsk').setAttribute("style", "color:green;"); }
-  else {
-    document.getElementById('procentlsk').setAttribute("style", "color:#cf596f;");
-
-  }  ;
-
-
-  if (etc_pct>0) { document.getElementById('procentetc').setAttribute("style", "color:green;"); }
-  else {
-    document.getElementById('procentetc').setAttribute("style", "color:#cf596f;");
-
-  }  ;
-
-  if (bch_pct>0) { document.getElementById('procentbch').setAttribute("style", "color:green;"); }
-  else {
-    document.getElementById('procentbch').setAttribute("style", "color:#cf596f;");
-
-  }  ;
-
-  if (dcr_pct>0) { document.getElementById('procentdcr').setAttribute("style", "color:green;"); }
-  else {
-    document.getElementById('procentdcr').setAttribute("style", "color:#cf596f;");
-
-  }  ;
+  if (bnb_pct>0) { document.getElementById('BNBpct').setAttribute("style", "color:green;"); }
+  else if(bnb_pct<0) {document.getElementById('BNBpct').setAttribute("style", "color:red;");}
+  else {document.getElementById('BNBpct').setAttribute("style", "color:fiolet;");}  ;
 
 
-
-  if (bnb_pct>0) { document.getElementById('procentbnb').setAttribute("style", "color:green;"); }
-  else {
-    document.getElementById('procentbnb').setAttribute("style", "color:#cf596f;");
-
-  }  ;
-
-
-  if (zec_pct>0) { document.getElementById('procentzec').setAttribute("style", "color:green;"); }
-  else {
-    document.getElementById('procentzec').setAttribute("style", "color:#cf596f;");
-
-  }  ;
+  if (zec_pct>0) { document.getElementById('ZECpct').setAttribute("style", "color:green;"); }
+  else if(zec_pct<0) {document.getElementById('ZECpct').setAttribute("style", "color:red;"); } 
+else {document.getElementById('ZECpct').setAttribute("style", "color:fiolet;");}
+   ;
 
 
 
 //wyslanie do htmla
-document.getElementById('BTCpct').textContent = btc_pct;
-document.getElementById('ETHpct').textContent = eth_pct;
-document.getElementById('XMRpct').textContent = xmr_pct;
-document.getElementById('LTCpct').textContent = ltc_pct;
-document.getElementById('DASHpct').textContent = dash_pct;
-document.getElementById('BTGpct').textContent = btg_pct;
-document.getElementById('LSKpct').textContent = lsk_pct;
+document.getElementById('BTCpct').textContent = btc_pct+"%";
+document.getElementById('ETHpct').textContent = eth_pct+"%";
+document.getElementById('XMRpct').textContent = xmr_pct+"%";
+document.getElementById('LTCpct').textContent = ltc_pct+"%";
+document.getElementById('DASHpct').textContent = dash_pct+"%";
+document.getElementById('BTGpct').textContent = btg_pct+"%";
+document.getElementById('LSKpct').textContent = lsk_pct+"%";
 
-document.getElementById('ETCpct').textContent = etc_pct;
-document.getElementById('BCHpct').textContent = bch_pct;
-document.getElementById('ZECpct').textContent = zec_pct;
-document.getElementById('DCRpct').textContent = dcr_pct;
-document.getElementById('BNBpct').textContent = bnb_pct;
+document.getElementById('ETCpct').textContent = etc_pct+"%";
+document.getElementById('BCHpct').textContent = bch_pct+"%";
+document.getElementById('ZECpct').textContent = zec_pct+"%";
+document.getElementById('DCRpct').textContent = dcr_pct+"%";
+document.getElementById('BNBpct').textContent = bnb_pct+"%";
 
 
 

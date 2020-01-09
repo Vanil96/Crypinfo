@@ -1,9 +1,9 @@
 
-const nbp_api = "http://api.nbp.pl/api/exchangerates/tables/A/?format=json";
+
 
 async function waluty_fiat() {
-  
-    
+
+  const nbp_api = "http://api.nbp.pl/api/exchangerates/tables/A/?format=json"; 
     
   const response = await fetch(nbp_api);
   const data = await response.json();
@@ -39,10 +39,10 @@ async function waluty_fiat() {
 
 //wysylanie do htmla
 
-document.getElementById('eur').textContent = eur_cut;
-document.getElementById('usd').textContent = usd_cut;
-document.getElementById('chf').textContent = chf_cut;
-document.getElementById('gbp').textContent = gbp_cut;
+document.getElementById('eur').textContent = eur_cut+" zł";
+document.getElementById('usd').textContent = usd_cut+" zł";
+document.getElementById('chf').textContent = chf_cut+" zł";
+document.getElementById('gbp').textContent = gbp_cut+" zł";
 
 
 
