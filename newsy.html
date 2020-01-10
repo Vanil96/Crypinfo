@@ -10,7 +10,7 @@
 	<meta name="keywords" content="kryptowaluty, bitcoin, newsy, kurs, klkulator ">
 	<meta name="author" content="Daniel Motyka">
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
-	
+	<link rel="shortcut icon" href="icons/favicon.ico" />
 	<!--  Bootstrap connection -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="main.css">
@@ -24,10 +24,10 @@
 <body class="bg-light">
 	
 
-	<script src="waluty.js" async> </script>
-	<script src="lista.js" async> </script>
-	<script src="kalkulator.js" async> </script>
-	<script src="globalinfo.js" async> </script>
+	<script src="javascript/waluty.js" async> </script>
+	<script src="javascript/news-list.js" async> </script>
+	<script src="javascript/kalkulator.js" async> </script>
+	<script src="javascript/globalinfo.js" async> </script>
 	
 
 
@@ -39,22 +39,48 @@
 
 					<header>
 	
-						<nav class="navbar navbar-expand-sm navbar navbar-light ";>
-									<a class="navbar-brand" href="index.html"><i class="fa fa-diamond"></i> Crypinfo</a>
-									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-									  <span class="navbar-toggler-icon"></span>
-									</button>
-									<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-									  <div class="navbar-nav">
-										<a class="nav-item nav-link active" href="index.html">Główna <span class="sr-only">(current)</span></a>
-										<a class="nav-item nav-link" href="newsy.html">Newsy</a>
-										<a class="nav-item nav-link" href="#">Alarmy</a>
-										<a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Kontakt</a>
-									  
-										
+						<nav class="navbar navbar-expand-md navbar navbar-light" id="nav";>
+							<a class="navbar-brand" href="index.html"><img src="icons/favicon.ico"> Crypinfo</a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+							  <span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+							  <div class="navbar-nav">
+								<a class="nav-item nav-link" href="index.html"><i class="fa fa-home"></i> Główna <span class="sr-only">(current)</span></a>
+								<a class="nav-item nav-link" href="newsy.html"><i class="fa fa-newspaper-o" > </i> Newsy</a>
+								<a class="nav-item nav-link" href="kalkulator.html"><i class="fa fa-calculator" > </i> Kalkulator</a>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fa fa-line-chart"></i> Kryptowaluty
+									</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+									  <a class="dropdown-item" href="btc.html"><img src="icons/BTC.png"> Bitcoin</a>
+									  <a class="dropdown-item" href="bch.html"><img src="icons/BCH.png"> Bitcoin Cash</a>
+									  <a class="dropdown-item" href="eth.html"><img src="icons/ETH.png"> Ethereum</a>
+									  <a class="dropdown-item" href="xmr.html"><img src="icons/XMR.png"> Monero</a>
+									  <a class="dropdown-item" href="dash.html"><img src="icons/DASH.png"> Dash</a>
+									  <a class="dropdown-item" href="ltc.html"><img src="icons/LTC.png"> Lite Coin</a>
+									  <a class="dropdown-item" href="zec.html"><img src="icons/ZEC.png"> Zcash</a>
+									  <a class="dropdown-item" href="dcr.html"><img src="icons/DCR.png"> Decred</a>
+									  <a class="dropdown-item" href="bnb.html"><img src="icons/BNB.png"> Binance Coin</a>
+									  <a class="dropdown-item" href="btg.html"><img src="icons/BTG.png"> Bitcoin Gold</a>
+									  <a class="dropdown-item" href="etc.html"><img src="icons/ETC.png"> Ethereum Classic</a>
+									  <a class="dropdown-item" href="lsk.html"><img src="icons/LSK.png"> Lisk Coin</a>
 									</div>
-									</div>
-								 </nav>
+								  </li>
+				
+								<a class="nav-item nav-link" href="info.html"><i class="fa fa-info-circle"></i> Info</a>
+								<a class="nav-item nav-link" href="kontakt.html"><i class="fa fa-envelope"></i> Kontakt</a>
+							
+
+							
+									
+								
+								  
+
+							</div>
+							</div>
+						 </nav>
  
 								</header>
 
@@ -65,7 +91,7 @@
 					<div class="row">
 								
 						<div class="col-12 col-md-8 order-2 order-md-1 "> 
-						<h3> Newsy  <br> </h3>
+							<div class="heading"><h3> Newsy <br> </h3> <h5> Obserwuj aktualizowane na bieżąco wiadomości ze świata kryptowalut. </h5> <small><i class="fa fa-refresh"></i> Aktualizacja co 120 sekund</small s></div>
 						</div>
 					
 					<!-- fiat values -->
