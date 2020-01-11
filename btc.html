@@ -10,7 +10,7 @@
 	<meta name="keywords" content="kryptowaluty, bitcoin, newsy, kurs, klkulator ">
 	<meta name="author" content="Daniel Motyka">
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
-	<link rel="shortcut icon" href="icons/favicon.ico" />
+	<link rel="shortcut icon" href="favicon.ico" />
 	<!--  Bootstrap connection -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="main.css">
@@ -39,32 +39,32 @@
 					<header>
 	
 						<nav class="navbar navbar-expand-md navbar navbar-light" id="nav";>
-							<a class="navbar-brand" href="index.html"><img src="icons/favicon.ico"> Crypinfo</a>
+							<a class="navbar-brand" href="index.html"><img src="favicon.ico"> Crypinfo</a>
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 							  <span class="navbar-toggler-icon"></span>
 							</button>
 							<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 							  <div class="navbar-nav">
 								<a class="nav-item nav-link" href="index.html"><i class="fa fa-home"></i> Główna <span class="sr-only">(current)</span></a>
-								<a class="nav-item nav-link" href="newsy.html"><i class="fa fa-newspaper-o" > </i> Newsy</a>
+								<a class="nav-item nav-link" href="newsy.html"><i class="fa fa-newspaper-o" > </i> Gazeta</a>
 								<a class="nav-item nav-link" href="kalkulator.html"><i class="fa fa-calculator" > </i> Kalkulator</a>
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										<i class="fa fa-line-chart"></i> Kryptowaluty
 									</a>
 									<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
-									  <a class="dropdown-item" href="btc.html"><img src="icons/BTC.png"> Bitcoin</a>
-									  <a class="dropdown-item" href="bch.html"><img src="icons/BCH.png"> Bitcoin Cash</a>
-									  <a class="dropdown-item" href="eth.html"><img src="icons/ETH.png"> Ethereum</a>
-									  <a class="dropdown-item" href="xmr.html"><img src="icons/XMR.png"> Monero</a>
-									  <a class="dropdown-item" href="dash.html"><img src="icons/DASH.png"> Dash</a>
-									  <a class="dropdown-item" href="ltc.html"><img src="icons/LTC.png"> Lite Coin</a>
-									  <a class="dropdown-item" href="zec.html"><img src="icons/ZEC.png"> Zcash</a>
-									  <a class="dropdown-item" href="dcr.html"><img src="icons/DCR.png"> Decred</a>
-									  <a class="dropdown-item" href="bnb.html"><img src="icons/BNB.png"> Binance Coin</a>
-									  <a class="dropdown-item" href="btg.html"><img src="icons/BTG.png"> Bitcoin Gold</a>
-									  <a class="dropdown-item" href="etc.html"><img src="icons/ETC.png"> Ethereum Classic</a>
-									  <a class="dropdown-item" href="lsk.html"><img src="icons/LSK.png"> Lisk Coin</a>
+									  <a class="dropdown-item" href="btc.html"><img src="img/BTC.png"> Bitcoin</a>
+									  <a class="dropdown-item" href="bch.html"><img src="img/BCH.png"> Bitcoin Cash</a>
+									  <a class="dropdown-item" href="eth.html"><img src="img/ETH.png"> Ethereum</a>
+									  <a class="dropdown-item" href="xmr.html"><img src="img/XMR.png"> Monero</a>
+									  <a class="dropdown-item" href="dash.html"><img src="img/DASH.png"> Dash</a>
+									  <a class="dropdown-item" href="ltc.html"><img src="img/LTC.png"> Lite Coin</a>
+									  <a class="dropdown-item" href="zec.html"><img src="img/ZEC.png"> Zcash</a>
+									  <a class="dropdown-item" href="dcr.html"><img src="img/DCR.png"> Decred</a>
+									  <a class="dropdown-item" href="bnb.html"><img src="img/BNB.png"> Binance Coin</a>
+									  <a class="dropdown-item" href="btg.html"><img src="img/BTG.png"> Bitcoin Gold</a>
+									  <a class="dropdown-item" href="etc.html"><img src="img/ETC.png"> Ethereum Classic</a>
+									  <a class="dropdown-item" href="lsk.html"><img src="img/LSK.png"> Lisk Coin</a>
 									</div>
 								  </li>
 				
@@ -122,7 +122,7 @@
 				  <div class="col-md-8" id="leftbody"> <!--start LEFT PANEL -->
 				<div class="row">
 					<div id="head-indyvidualpage" class="col-6"> 	
-						<h1> <img src="icons/BTC.png" alt="Ikona Kryptowaluty"> Bitcoin </h1>
+						<h1> <img src="img/BTC.png" alt="Ikona Kryptowaluty"> Bitcoin </h1>
 	 </div>   </div>
 
 <div class="jumbotron jumbotron-fluid jumbotron-ind" >  <!-- jumbotron-ind  for-->      
@@ -290,8 +290,12 @@
 					<ul class="list-group">
 						<li class="list-group-item list-group-item-primary"><i class="fa fa-signal" > </i><b> Kapitalizacja: </b> <span id="kapitalizacja"> </span></li>
 						<!-- <li class="list-group-item ">Ilość Coinow:  <span id="ilosc_coinow"> </span>  </li> -->
-						<li class="list-group-item" style="color:green" ><i class="fa fa-bitcoin"> </i> Dominacja BTC:  <span id="btc_dominacja"> </span>%</li>
-						<li class="list-group-item"><i class="fa fa-money" > </i> Wolumen:  <span id="volume"> </span></li>
+						<li class="list-group-item" style="color:green" ><i class="fa fa-bitcoin"> </i> Dominacja BTC:  <span id="btc_dominacja"> </span> 
+						<div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" id="progress_bar"> 
+				  </div> </div>
+</li>
+<li class="list-group-item"><i class="fa fa-money" > </i> Wolumen:  <span id="volume"> </span></li>
 					   
 					  </ul> <!-- end -->
 				
@@ -418,10 +422,16 @@
 
 							 <!-- Footer  -->
 		
-						<div class="col-12 bg-info" id="footer">
+						<div class="col-12" id="footer">
 		
-		Footer
-		
+				
+							<div class="row"> 
+								<div class="col-3"> <a href="kalkulator.html"> Kalkulator </a>  </div>
+								<div class="col-3"> <a href="newsy.html"> Gazeta </a>    </div>
+								<div class="col-3"> <a href="kontakt.html"> Kontakt </a>    </div>
+								<div class="col-3"> <a href="info.html"> Informacje </a>    </div>
+								</div>
+								<span><i class="fa fa-copyright"></i> Copyright by Crypinfo</span>	 <br>	
 
 						</div>  <!-- end footer  -->
 		

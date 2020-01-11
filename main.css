@@ -57,9 +57,24 @@ height: auto;
 
 #footer{
 height: auto;
-background-color: #181C30;
-border-top:5px,solid,red;
+background-color: #eeeeeeef;
 
+
+}
+
+#footer p{
+	font-size:small;
+	font-style:italic;
+
+}
+
+#footer a{
+	color:black;
+	font-size:small;
+	font-style:italic;
+}
+#footer img{
+	max-width:20px;
 }
 
 .heading{
