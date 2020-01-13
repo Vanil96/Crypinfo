@@ -20,13 +20,15 @@ async function przeliczaj() {
 
 
 //zmienne kryptowalut 
-var btc = cryp.BTC.PLN;
-var eth = cryp.ETH.PLN;
-var xmr = cryp.XMR.PLN;
-var dash = cryp.DASH.PLN;
-var ltc = cryp.LTC.PLN;
-var btg = cryp.BTG.PLN;
-var lsk = cryp.LSK.PLN;
+let btc = cryp.BTC.PLN;
+let eth = cryp.ETH.PLN;
+let xmr = cryp.XMR.PLN;
+let dash = cryp.DASH.PLN;
+let ltc = cryp.LTC.PLN;
+let btg = cryp.BTG.PLN;
+let lsk = cryp.LSK.PLN;
+
+
 
 
 
@@ -34,15 +36,15 @@ var lsk = cryp.LSK.PLN;
 //zmienne walut fiat (globalnych)
 
 
-var pln = 1;
-var eur = fiat[0].rates[7].mid;
-var usd = fiat[0].rates[1].mid; 
-var chf = fiat[0].rates[9].mid;
-var gbp = fiat[0].rates[10].mid;
+let pln = 1;
+let eur = fiat[0].rates[7].mid;
+let usd = fiat[0].rates[1].mid; 
+let chf = fiat[0].rates[9].mid;
+let gbp = fiat[0].rates[10].mid;
 
  
-var krok1;
-var krok2;
+let krok1;
+let krok2;
 
 
 switch (przelicznik.co.value)
@@ -131,91 +133,13 @@ switch (przelicznik.naCo.value)
         krok2 = "Connection Lost";
 }
 
-przelicznik.wynik.value = krok2; 
+przelicznik.wynik.value = krok2.toLocaleString(); 
 
 
 }
 
 
-        
-    //     switch (przelicznik.co.value)
-    //     {
-    //         case "PLN":
-    //             krok1 = przelicznik.ile.value*pln;
-    //             break;
-    //         case "EUR":
-    //             krok1 = przelicznik.ile.value*eur;
-    //             break;
-    //         case "USD":
-    //             krok1 = przelicznik.ile.value*usd;
-    //             break;
-    //         case "BTC":
-    //              krok1 = przelicznik.ile.value*btc;
-    //             break;
-    //             case "ETH":
-    //                 krok1 = przelicznik.ile.value*eth;
-    //                break;
-    //                case "XMR":
-    //                 krok1 = przelicznik.ile.value*xmr;
-    //                break;
-    //                case "DASH":
-    //                 krok1 = przelicznik.ile.value*dash;
-    //                break;
-    //                case "LTC":
-    //                 krok1 = przelicznik.ile.value*ltc;
-    //                break;
-    //                case "BTG":
-    //                 krok1 = przelicznik.ile.value*btg;
-    //                break;
-    //                case "LSK":
-    //                 krok1 = przelicznik.ile.value*lsk;
-    //                break;
-    //         default:
-    //             krok1 = "error";
-    //     }
-        
-    //     switch (przelicznik.naCo.value)
-    //     {
-    //         case "PLN":
-    //             krok2 = krok1/pln;
-    //             break;
-    //         case "EUR":
-    //             krok2 = krok1/eur;
-    //             break;
-    //         case "USD":
-    //             krok2 = krok1/usd;
-    //             break;
-    //         case "BTC":
-    //             krok2 = krok1/btc;
-    //             break;
-    //             case "BTC":
-    //                 krok2 = krok1/eth;
-    //                 break;
-    //                 case "BTC":
-    //                     krok2 = krok1/xmr;
-    //                     break;
-    //                     case "BTC":
-    //                         krok2 = krok1/dash;
-    //                         break;
-    //                         case "BTC":
-    //                             krok2 = krok1/ltc;
-    //                             break;
-    //                             case "BTC":
-    //                                 krok2 = krok1/btg;
-    //                                 break;
-    //                                 case "BTC":
-    //                                     krok2 = krok1/lsk;
-    //                                     break;
-                                       
-    //         default:
-    //             krok2 = "Connection Lost";
-    //     }
-        
-    // przelicznik.wynik.value = krok2; 
-
     
-    //   }
-
 
 
 

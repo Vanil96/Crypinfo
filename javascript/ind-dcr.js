@@ -1,23 +1,23 @@
 
 async function Crypto_ind() {
     let apikey="&api_key=a19ca4952f0fe76f7457c50e3df9029c473e710c3e29360c97d2afb621b25816";
-    crypto_href= "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=USD,PLN,EUR,GBP"+apikey;
+    crypto_href= "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=DCR&tsyms=USD,PLN,EUR,GBP"+apikey;
     
 
     const response = await fetch(crypto_href);
     const data = await response.json();
 
 
-const price_pln = data.RAW.BTC.PLN.PRICE;
-const price_usd = data.RAW.BTC.USD.PRICE;
-const price_eur = data.RAW.BTC.EUR.PRICE;
-const low = data.RAW.BTC.PLN.LOW24HOUR;
-const high = data.RAW.BTC.PLN.HIGH24HOUR;
-const change = data.RAW.BTC.PLN.CHANGEPCT24HOUR; 
-const kapital = data.RAW.BTC.USD.MKTCAP;   
-const wolumen = data.RAW.BTC.USD.VOLUME24HOUR; 
+const price_pln = data.RAW.DCR.PLN.PRICE;
+const price_usd = data.RAW.DCR.USD.PRICE;
+const price_eur = data.RAW.DCR.EUR.PRICE;
+const low = data.RAW.DCR.PLN.LOW24HOUR;
+const high = data.RAW.DCR.PLN.HIGH24HOUR;
+const change = data.RAW.DCR.PLN.CHANGEPCT24HOUR; 
+const kapital = data.RAW.DCR.USD.MKTCAP;   
+const wolumen = data.RAW.DCR.USD.VOLUME24HOUR; 
 
-const curr = " BTC";
+const curr = " DCR";
 const pricefor1000 = (1/price_pln)*1000;    // ilość btc za 1000zł
 
 
@@ -47,7 +47,7 @@ Crypto_ind();
 
 async function newsy_ind() {
     let apikey="&api_key=a19ca4952f0fe76f7457c50e3df9029c473e710c3e29360c97d2afb621b25816";
-    newsy_href= "https://min-api.cryptocompare.com/data/v2/news/?categories=BTC,Bitcoin,Satoshi"+apikey;    
+    newsy_href= "https://min-api.cryptocompare.com/data/v2/news/?categories=Market,Altcoin,Blockchain"+apikey;    
     
     const response = await fetch(newsy_href);
     const logi = await response.json();

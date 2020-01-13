@@ -1,86 +1,144 @@
 
+
+
 async function newsy() {
 let apikey="&api_key=a19ca4952f0fe76f7457c50e3df9029c473e710c3e29360c97d2afb621b25816";
 newsy_href= "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"+apikey;    
 
 const response = await fetch(newsy_href);
 const logi = await response.json();
-
-
 const news = logi.Data;
+
+let obecna = Date.now();
+
+let roznica0 = news[0].published_on*1000;
+let timelast0 = (Math.round(((obecna-roznica0)/1000)/60));
+
+let roznica1 = news[1].published_on*1000;
+let timelast1 = (Math.round(((obecna-roznica1)/1000)/60));
+
+let roznica2 = news[2].published_on*1000;
+let timelast2 = (Math.round(((obecna-roznica2)/1000)/60));
+
+let roznica3 = news[3].published_on*1000;
+let timelast3 = (Math.round(((obecna-roznica3)/1000)/60));
+
+let roznica4 = news[4].published_on*1000;
+let timelast4 = (Math.round(((obecna-roznica4)/1000)/60));
+
+let roznica5 = news[5].published_on*1000;
+let timelast5 = (Math.round(((obecna-roznica5)/1000)/60));
+
+let roznica6 = news[6].published_on*1000;
+let timelast6 = (Math.round(((obecna-roznica6)/1000)/60));
+
+let roznica7 = news[7].published_on*1000;
+let timelast7 = (Math.round(((obecna-roznica7)/1000)/60));
+
+let roznica8 = news[8].published_on*1000;
+let timelast8 = (Math.round(((obecna-roznica8)/1000)/60));
+
+let roznica9 = news[9].published_on*1000;
+let timelast9 = (Math.round(((obecna-roznica9)/1000)/60));
+
+let roznica10 = news[10].published_on*1000;
+let timelast10 = (Math.round(((obecna-roznica10)/1000)/60));
+
+let roznica11 = news[11].published_on*1000;
+let timelast11 = (Math.round(((obecna-roznica11)/1000)/60));
+
+
+
+
+
 
 
 document.getElementById('title0').textContent = news[0].title;
 document.getElementById('body0').textContent = news[0].body;
-document.getElementById("img0").setAttribute("src",news[0].source_info.img);
+document.getElementById("img0").setAttribute("src",news[0].imageurl);
 document.getElementById("url0").setAttribute("href",news[0].url);
 document.getElementById("categories0").textContent = news[0].categories;
-
+document.getElementById("timepg-0").textContent = time_convert(timelast0);
 
 
 document.getElementById('title1').textContent = news[1].title;
 document.getElementById('body1').textContent = news[1].body;
-document.getElementById("img1").setAttribute("src",news[1].source_info.img);
+document.getElementById("img1").setAttribute("src",news[1].imageurl);
 document.getElementById("url1").setAttribute("href",news[1].url);
 document.getElementById("categories1").textContent = news[1].categories;
-
+document.getElementById("timepg-1").textContent = time_convert(timelast1);
 
 
 document.getElementById('title2').textContent = news[2].title;
 document.getElementById('body2').textContent = news[2].body;
-document.getElementById("img2").setAttribute("src",news[2].source_info.img);
+document.getElementById("img2").setAttribute("src",news[2].imageurl);
 document.getElementById("url2").setAttribute("href",news[2].url);
 document.getElementById("categories2").textContent = news[2].categories;
+document.getElementById("timepg-2").textContent = time_convert(timelast2);
 
 document.getElementById('title3').textContent = news[3].title;
 document.getElementById('body3').textContent = news[3].body;
-document.getElementById("img3").setAttribute("src",news[3].source_info.img);
+document.getElementById("img3").setAttribute("src",news[3].imageurl);
 document.getElementById("url3").setAttribute("href",news[3].url);
 document.getElementById("categories3").textContent = news[3].categories;
+document.getElementById("timepg-3").textContent = time_convert(timelast3);
 
 document.getElementById('title4').textContent = news[4].title;
 document.getElementById('body4').textContent = news[4].body;
-document.getElementById("img4").setAttribute("src",news[4].source_info.img);
+document.getElementById("img4").setAttribute("src",news[4].imageurl);
 document.getElementById("url4").setAttribute("href",news[4].url);
 document.getElementById("categories4").textContent = news[4].categories;
+document.getElementById("timepg-4").textContent = time_convert(timelast4);
 
 document.getElementById('title5').textContent = news[5].title;
 document.getElementById('body5').textContent = news[5].body;
-document.getElementById("img5").setAttribute("src",news[5].source_info.img);
+document.getElementById("img5").setAttribute("src",news[5].imageurl);
 document.getElementById("url5").setAttribute("href",news[5].url);
 document.getElementById("categories5").textContent = news[5].categories;
-
+document.getElementById("timepg-5").textContent = time_convert(timelast5);
 
 document.getElementById('title6').textContent = news[6].title;
 document.getElementById('body6').textContent = news[6].body;
-document.getElementById("img6").setAttribute("src",news[6].source_info.img);
+document.getElementById("img6").setAttribute("src",news[6].imageurl);
 document.getElementById("url6").setAttribute("href",news[6].url);
 document.getElementById("categories6").textContent = news[6].categories;
+document.getElementById("timepg-6").textContent = time_convert(timelast6);
 
 document.getElementById('title7').textContent = news[7].title;
 document.getElementById('body7').textContent = news[7].body;
-document.getElementById("img7").setAttribute("src",news[7].source_info.img);
+document.getElementById("img7").setAttribute("src",news[7].imageurl);
 document.getElementById("url7").setAttribute("href",news[7].url);
 document.getElementById("categories7").textContent = news[7].categories;
+document.getElementById("timepg-7").textContent = time_convert(timelast7);
 
 
 document.getElementById('title8').textContent = news[8].title;
 document.getElementById('body8').textContent = news[8].body;
-document.getElementById("img8").setAttribute("src",news[8].source_info.img);
+document.getElementById("img8").setAttribute("src",news[8].imageurl);
 document.getElementById("url8").setAttribute("href",news[8].url);
 document.getElementById("categories8").textContent = news[8].categories;
+document.getElementById("timepg-8").textContent = time_convert(timelast8);
 
 document.getElementById('title9').textContent = news[9].title;
 document.getElementById('body9').textContent = news[9].body;
-document.getElementById("img9").setAttribute("src",news[9].source_info.img);
+document.getElementById("img9").setAttribute("src",news[9].imageurl);
 document.getElementById("url9").setAttribute("href",news[9].url);
 document.getElementById("categories9").textContent = news[9].categories;
+document.getElementById("timepg-9").textContent = time_convert(timelast9);
 
 document.getElementById('title10').textContent = news[10].title;
 document.getElementById('body10').textContent = news[10].body;
-document.getElementById("img10").setAttribute("src",news[10].source_info.img);
+document.getElementById("img10").setAttribute("src",news[10].imageurl);
 document.getElementById("url10").setAttribute("href",news[10].url);
 document.getElementById("categories10").textContent = news[10].categories;
+document.getElementById("timepg-10").textContent = time_convert(timelast10);
+
+document.getElementById('title11').textContent = news[11].title;
+document.getElementById('body11').textContent = news[11].body;
+document.getElementById("img11").setAttribute("src",news[11].imageurl);
+document.getElementById("url11").setAttribute("href",news[11].url);
+document.getElementById("categories11").textContent = news[11].categories;
+document.getElementById("timepg-11").textContent = time_convert(timelast11);
 
 
 //document.getElementById('title^').textContent = news[^].title;

@@ -5,10 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
-	<title>Crypinfo</title>
-	<meta name="description" content="Portal skupiający informacje odnośnie kryptowalut">
-	<meta name="keywords" content="kryptowaluty, bitcoin, newsy, kurs, klkulator ">
-	<meta name="author" content="Daniel Motyka">
+	<title>Kurs Bitcoin</title>
+	<meta name="description" content="Kurs oraz statystyki BinanceCoin">
+	<meta name="keywords" content="kryptowaluty, bitcoin, newsy, kurs, klkulator, btc, ">
+	<meta name="author" content="Crypinfo">
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!--  Bootstrap connection -->
@@ -23,7 +23,7 @@
 <body class="bg-light">
 
 	<script src="javascript/waluty.js" async> </script>
-	
+	<script src="javascript/timeconvert.js" async> </script>
 	<script src="javascript/kalkulator.js" async> </script>
 	<script src="javascript/globalinfo.js" async> </script>
 	<script src="javascript/global_news.js" async> </script>
@@ -37,7 +37,6 @@
 			<div class="container">
 
 					<header>
-	
 						<nav class="navbar navbar-expand-md navbar navbar-light" id="nav";>
 							<a class="navbar-brand" href="index.html"><img src="favicon.ico"> Crypinfo</a>
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +46,7 @@
 							  <div class="navbar-nav">
 								<a class="nav-item nav-link" href="index.html"><i class="fa fa-home"></i> Główna <span class="sr-only">(current)</span></a>
 								<a class="nav-item nav-link" href="newsy.html"><i class="fa fa-newspaper-o" > </i> Gazeta</a>
-								<a class="nav-item nav-link" href="kalkulator.html"><i class="fa fa-calculator" > </i> Kalkulator</a>
+								
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										<i class="fa fa-line-chart"></i> Kryptowaluty
@@ -68,14 +67,10 @@
 									</div>
 								  </li>
 				
-								<a class="nav-item nav-link" href="info.html"><i class="fa fa-info-circle"></i> Info</a>
+								  <a class="nav-item nav-link" href="kalkulator.html"><i class="fa fa-calculator" > </i> Kalkulator</a>
+								  <a class="nav-item nav-link" href="gieldy.html"><i class="fa fa-bank" > </i> Giełdy</a>
+								  <a class="nav-item nav-link" href="info.html"><i class="fa fa-info-circle"></i> Info</a>
 								<a class="nav-item nav-link" href="kontakt.html"><i class="fa fa-envelope"></i> Kontakt</a>
-							
-
-							
-									
-								
-								  
 
 							</div>
 							</div>
@@ -91,9 +86,8 @@
 								
 						<div class="col-12 col-md-8 order-2 order-md-1 "> 
 						
-						<div class="heading"> <h3> Szczegółowe informacje <br> </h3> <h5> Aktualizowane na bieżąco informacje nt. danej kryptowaluty </h5><small><i class="fa fa-refresh"></i> Aktualizacja co 10 sekund</small> </div>
+						<div class="heading"> <h3> Szczegółowe informacje <br> </h3> <h5> Aktualizowane na bieżąco informacje nt. danej kryptowaluty </h5><small><i class="fa fa-refresh"></i> Aktualizacja co 20 sekund</small> </div>
 
-  
 
 						</div>
 					
@@ -127,11 +121,15 @@
 
 <div class="jumbotron jumbotron-fluid jumbotron-ind" >  <!-- jumbotron-ind  for-->      
 	<div class="row" > 
-<div class="col-12 col-md-6" > <h4> Aktualny kurs BTC</h4 a>  <span>Aktualizacja danych co 10 sekund </span> 
-<span id="pricepln_ind"> </span> 
+<div class="col-md-6" > 
+	<div class="row">  
+	<div class="col-12">  <h4> Aktualny kurs BTC</h4>  <span>Aktualizacja danych co 10 sekund </span>  </div>
+	<div class="col-12"> <span id="pricepln_ind"> </span> </div>
 <div id="well_price" class="col-12">
 <span id="priceusd_ind"> usd price </span> <br>
 <span id="priceeur_ind"> eur price </span><br>
+
+</div>
 
 </div> 
 
@@ -155,7 +153,7 @@
 
 		<div class="col-6 col-md-3 "> <hr> <h6><i class="fa fa-level-up"> </i>High 24h </h6>  <span id="high_ind"> high  </span>        </div>
 		<div class="col-6 col-md-3 "> <hr> <h6><i class="fa fa-level-down"> </i>Low 24h </h6> <span id="low_ind"> low </span>          </div>
-		<div class="col-6 col-md-3 "> <hr> <h6><i class="fa fa-calculator"> </i> 1000 PLN </h6>  <span id="calc_ind" > 33562</span>              </div>
+		<div class="col-6 col-md-3 "> <hr> <h6><i class="fa fa-calculator"> </i> 1000 PLN </h6>  <span id="calc_ind" > calc</span>              </div>
 		<div class="col-6 col-md-3 "> <hr> <h6><i class="fa fa-percent"> </i> Zmiana(24h) </h6>  <span id="change_ind"> change </span>        </div>
 			</div> <!-- koniec row'a 2 -->   
 
@@ -198,77 +196,106 @@
 
 <!-- start news --> 
 
-<div class="col-12 newsy-ind" >   <h4 > <i class="fa fa-newspaper-o" > </i> Ostatnie wiadomości </h4> </div>
+<div class="col-12 newsy-ind" >   <h4 > <i class="fa fa-newspaper-o" > </i> Ostatnie wiadomości </h4> <small> Artykuły związane z daną kryptowalutą</small></div>
 					<div id="accordion">
-						
 						<div class="card">
 							<div class="card-header" id="headingOne">
 							  <h5 class="mb-0">
 								  <img  class="card-img-top img-fluid img-acordion" id="img0" > 
-								  <span id="title0" class="text-primary title" data-toggle="collapse" data-target="#collapse0"> </span>   
-							  </h5>
+							  <span id="title0" class="text-primary title" data-toggle="collapse" data-target="#collapse0"> </span>
+ </h5> <span class="col-12 timenews" id="timepg-0">  </span>
 							</div>
 						
 							<div id="collapse0" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 							  <div class="card-body" >
 								<p id="body0"> </p>
 								<a id="url0"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
-								<br> <span><b>Kategorie:</b> <span id="categories0"></span> </span>
+								<br> <span class="news-category"><b>Kategorie:</b> <span id="categories0"></span> </span>
 							  </div>
 							</div>
-					
 						  </div>
-	
-	
-						<div class="card">
-	  <div class="card-header" id="heading1">
-		<h5 class="mb-0">
-			<img  class="card-img-top img-fluid img-acordion" id="img1" > 
-			<span id="title1" class="text-primary title" data-toggle="collapse" data-target="#collapse1"> </span> 
-		</h5>
-	  </div>
-  
-	  <div id="collapse1" class="collapse hide" aria-labelledby="heading1" data-parent="#accordion">
-		<div class="card-body" >
-		  <p id="body1"> </p>
-		  <a id="url1"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
-		  <br> <span><b>Kategorie:</b> <span id="categories1"></span> </span>
-		</div>
-	  </div>
-	</div>
 
-	<div class="card">
-	<div class="card-header" id="heading2">
-		<h5 class="mb-0">
-			<img  class="card-img-top img-fluid img-acordion" id="img2" > 
-			<span id="title2" class="text-primary title" data-toggle="collapse" data-target="#collapse5"> </span> 
-		</h5>
-	  </div>
-  
-	  <div id="collapse5" class="collapse hide" aria-labelledby="heading2" data-parent="#accordion">
-		<div class="card-body" >
-		  <p id="body2"> </p>
-		  <a id="url2"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
-		  <br> <span><b>Kategorie:</b> <span id="categories2"></span> </span>
-		</div>
-	  </div>
-	</div>
-	<div class="card">
-	<div class="card-header" id="heading3">
-		<h5 class="mb-0">
-			<img  class="card-img-top img-fluid img-acordion" id="img3" > 
-			<span id="title3" class="text-primary title" data-toggle="collapse" data-target="#collapse2"> </span> 
-		</h5>
-	  </div>
-  
-	  <div id="collapse2" class="collapse hide" aria-labelledby="heading3" data-parent="#accordion">
-		<div class="card-body" >
-		  <p id="body3"> </p>
-		  <a id="url3"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
-		  <br> <span><b>Kategorie:</b> <span id="categories3"></span> </span>
-		</div>
-	  </div>
-	</div>
+
+						<div class="card">
+						  <div class="card-header" id="headingOne">
+							<h5 class="mb-0">
+								<img  class="card-img-top img-fluid img-acordion" id="img1" > 
+								<span id="title1" class="text-primary title" data-toggle="collapse" data-target="#collapse1"> </span>   
+							</h5>
+							<span class="col-12 timenews" id="timepg-1">  </span>
+						  </div>
+					  
+						  <div id="collapse1" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+							<div class="card-body" >
+							  <p id="body1"> </p>
+							  <a id="url1"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+							  <br> <span class="news-category"><b>Kategorie:</b> <span id="categories1"></span> </span>
+							</div>
+						  </div>
+						</div>
+
+
+
+						<div class="card">
+							<div class="card-header" id="headingOne">
+							  <h5 class="mb-0">
+								  <img  class="card-img-top img-fluid img-acordion" id="img2" > 
+								  <span id="title2" class="text-primary title" data-toggle="collapse" data-target="#collapse2"> </span>   
+							  </h5>
+							  <span class="col-12 timenews" id="timepg-2">  </span>
+							</div>
+						
+							<div id="collapse2" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+							  <div class="card-body" >
+								<p id="body2"> </p>
+								<a id="url2"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+								<br> <span class="news-category"><b>Kategorie:</b> <span id="categories2"></span> </span>
+							  </div>
+							</div>
+
+						  </div>
+					
+
+						  <div class="card">
+							<div class="card-header" id="headingOne">
+							  <h5 class="mb-0">
+								  <img  class="card-img-top img-fluid img-acordion" id="img3" > 
+								  <span id="title3" class="text-primary title" data-toggle="collapse" data-target="#collapse3"> </span>   
+							  </h5>
+							  <span class="col-12 timenews" id="timepg-3">  </span>
+							</div>
+						
+							<div id="collapse3" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+							  <div class="card-body" >
+								<p id="body3"> </p>
+								<a id="url3"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+								<br> <span class="news-category"><b>Kategorie:</b> <span id="categories3"></span> </span>
+							  </div>
+							</div>
+
+						  </div>  
+
+
+
+
+						  <div class="card">
+							<div class="card-header" id="headingOne">
+							  <h5 class="mb-0">
+								  <img  class="card-img-top img-fluid img-acordion" id="img4" > 
+								  <span id="title4" class="text-primary title" data-toggle="collapse" data-target="#collapse4"> </span>   
+							  </h5>
+							  <span class="col-12 timenews" id="timepg-4">  </span>
+							</div>
+							
+							<div id="collapse4" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+							  <div class="card-body" >
+								<p id="body4"> </p>
+								<a id="url4"  class="btn btn-outline-primary"><i class="fa fa-newspaper-o"></i>Czytaj artykuł</a>
+								<br> <span class="news-category"><b>Kategorie:</b> <span id="categories4"></span> </span>
+							  </div>
+							</div>
+							
+							</div> 
 
 
 
@@ -278,9 +305,9 @@
 	
 </div>   <!--  END ROW  CHART -->   
 
-
-
-
+<H5> <i class="fa fa-info-circle"> </i> Informacje </H5>
+<p> Statystyki coinów są bardzo precyzyjne, dlatego że wyliczane są na podstawie średniej ważonej z ponad 100 giełd kryptowalut. Dodatkowo dla każdej kryptowaluty podpinamy indywidualną gazetkę z najnowszymi informacjami na jej temat. 
+				</p> 
 
 </div>   <!-- END LEFT PANEL  -->
                     <!-- RIGHT PANEL  -->
@@ -337,6 +364,7 @@
 				<div class="card-body">
 					<img class="card-img-top img-fluid"  id="img" > 
 				  <p class="card-text" id="title" > </p>
+				  <span id="time-nw"> </span>
 				</div>
 				  <a id="url"  class="btn btn-info"><i class="fa fa-newspaper-o  " > </i> Czytaj Dalej</a> 
 			  </div>  <!--END NEWS CARD  -->
@@ -402,21 +430,7 @@
 		</div>   <!-- END RIGHT PANEL  -->
 		
 		
-		<!--  start down panel  -->
-		<div class="col-12"> 
-		<div class="row">   	
-				<div class="col-12 col-md-12" id="down_panel" >
-				<H4> Kilka słów o serwisie </H4>
-				<p> Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
-				</p>
-				<p> Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
-				</p>
-				<p> Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
-				</p>
-					  </div>
-					</div>
-				  </div>  <!-- End down panel -->
-				
+		
 		
 		</div>  <!-- end row MIDDLE-->
 
@@ -426,12 +440,15 @@
 		
 				
 							<div class="row"> 
-								<div class="col-3"> <a href="kalkulator.html"> Kalkulator </a>  </div>
-								<div class="col-3"> <a href="newsy.html"> Gazeta </a>    </div>
-								<div class="col-3"> <a href="kontakt.html"> Kontakt </a>    </div>
-								<div class="col-3"> <a href="info.html"> Informacje </a>    </div>
+								<div class="col-md-2"> <a href="index.html"> Główna </a>    </div>
+								<div class="col-md-2"> <a href="kalkulator.html"> Kalkulator </a>  </div>
+								<div class="col-md-2"> <a href="newsy.html"> Gazeta </a>    </div>
+								<div class="col-md-2"> <a href="kontakt.html"> Kontakt </a>    </div>
+								<div class="col-md-2"> <a href="gieldy.html"> Giełdy </a>    </div>
+								<div class="col-md-2"> <a href="info.html"> Informacje </a>    </div>
+								
 								</div>
-								<span><i class="fa fa-copyright"></i> Copyright by Crypinfo</span>	 <br>	
+								<span><i class="fa fa-copyright"></i> Copyright by <img src="favicon.ico">Crypinfo</span>	
 
 						</div>  <!-- end footer  -->
 		

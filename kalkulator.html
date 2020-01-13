@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<title>Kalkulator</title>
+	<meta name="description" content="Prosty i intuicyjny kalkulator kryptowalut">
+	<meta name="keywords" content="kryptowaluty, bitcoin, newsy, kurs, klkulator ">
+	<meta name="author" content="Crypinfo">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="favicon.ico" />
+	<!--  Bootstrap connection -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	
+	
+</head>
+
+<body class="bg-light">
+	<script src="javascript/timeconvert.js" async> </script>
+	<script src="javascript/waluty.js" async> </script>
+	<script src="javascript/kalkulator-pg.js" async> </script>
+	<script src="javascript/globalinfo.js" async> </script>
+	<script src="javascript/global_news.js" async> </script>
+	
+
+	<main>
+
+		<section class="kontent">
+		
+			<div class="container">
+
+					<header>
+	
+						<nav class="navbar navbar-expand-md navbar navbar-light" id="nav";>
+							<a class="navbar-brand" href="index.html"><img src="favicon.ico"> Crypinfo</a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+							  <span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+							  <div class="navbar-nav">
+								<a class="nav-item nav-link" href="index.html"><i class="fa fa-home"></i> Główna <span class="sr-only">(current)</span></a>
+								<a class="nav-item nav-link" href="newsy.html"><i class="fa fa-newspaper-o" > </i> Gazeta</a>
+								
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="fa fa-line-chart"></i> Kryptowaluty
+									</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+									  <a class="dropdown-item" href="btc.html"><img src="img/BTC.png"> Bitcoin</a>
+									  <a class="dropdown-item" href="bch.html"><img src="img/BCH.png"> Bitcoin Cash</a>
+									  <a class="dropdown-item" href="eth.html"><img src="img/ETH.png"> Ethereum</a>
+									  <a class="dropdown-item" href="xmr.html"><img src="img/XMR.png"> Monero</a>
+									  <a class="dropdown-item" href="dash.html"><img src="img/DASH.png"> Dash</a>
+									  <a class="dropdown-item" href="ltc.html"><img src="img/LTC.png"> Lite Coin</a>
+									  <a class="dropdown-item" href="zec.html"><img src="img/ZEC.png"> Zcash</a>
+									  <a class="dropdown-item" href="dcr.html"><img src="img/DCR.png"> Decred</a>
+									  <a class="dropdown-item" href="bnb.html"><img src="img/BNB.png"> Binance Coin</a>
+									  <a class="dropdown-item" href="btg.html"><img src="img/BTG.png"> Bitcoin Gold</a>
+									  <a class="dropdown-item" href="etc.html"><img src="img/ETC.png"> Ethereum Classic</a>
+									  <a class="dropdown-item" href="lsk.html"><img src="img/LSK.png"> Lisk Coin</a>
+									</div>
+								  </li>
+				
+								  <a class="nav-item nav-link" href="kalkulator.html"><i class="fa fa-calculator" > </i> Kalkulator</a>
+								  <a class="nav-item nav-link" href="gieldy.html"><i class="fa fa-bank" > </i> Giełdy</a>
+								  <a class="nav-item nav-link" href="info.html"><i class="fa fa-info-circle"></i> Info</a>
+								<a class="nav-item nav-link" href="kontakt.html"><i class="fa fa-envelope"></i> Kontakt</a>
+
+							</div>
+							</div>
+						 </nav>
+ 
+								</header>
+
+				<!-- upper section -->
+
+				  <div class="col-12 bg-light" id="uphead" > 
+					
+					<div class="row">
+								
+						<div class="col-12 col-md-8 order-2 order-md-1 "> 
+						
+						<div class="heading"> <h3><i class="fa fa-calculator"></i> Kalkulator <br> </h3> <h5> Został wzbogacony o wiele więcej pozycji kryptowalut oraz walut tradycyjnych z całego świata, od teraz nie ma wartości do niepoliczenia! </h5><small><i class="fa fa-list"></i> W dalszej części znajdziesz liste walut które obsługuje kalkulator</small> </div>
+
+						</div>
+					
+					<!-- fiat values -->
+					<div class="col-12 col-md-4 border-left order-1 order-md-2"> 
+						<div class="row">
+							<div class="col-12" id="fiat"> 
+						
+								<h5 class="text-primary" > <i class="fa fa-globe" >   </i> Waluty tradycyjne </h5> 
+
+								<div class="row"> 
+									<div   class="col-6 col-md-3 currencies"> 	<img src="img/eur.png" class="img-fiat"> EUR <span id="eur" ></span>       </div>
+									<div  class="col-6 col-md-3 currencies" >			<img src="img/usd.png" class="img-fiat"> USD <span id="usd"> </span>   </div>
+										<div  class="col-6 col-md-3 currencies"  >		<img src="img/gbp.png" class="img-fiat"> GBP <span id="gbp"> </span>  </div>
+											<div  class="col-6 col-md-3 currencies"  >		<img src="img/chf.png" class="img-fiat">  CHF <span id="chf"> </span>  </div>
+													
+								</div>
+									
+								</div>
+							</div>
+					</div>
+							</div>		
+							</div>
+						<!-- EEND upper section -->
+				  <div class="row";>   <!-- START ROW MIDDLE -->       
+				  <div class="col-md-8" id="leftbody"> <!--start LEFT PANEL -->
+
+					<div class="row">
+						<div class="col-lg-8 offset-lg-2">  <!--  start calc -->
+							
+							<div class="card bg-light" id="calculator_pg">
+								<div class="card-header">  <h5> <i class="fa fa-calculator  " > </i> Kalkulator</h5>  </div>
+								<div class="card-body">
+									<div class="form-row">
+										<form action="" name="przelicznik">
+											<div class="row">   
+											  <h5 class="col-6" > Co chcesz wymienić:</h5>
+			
+											<select name="co" class="col-md-4 col-6 ">
+												<option name="PLN" value="PLN" class="fiat_calc">PLN polski złoty</option>
+												<option name="EUR" value="EUR" class="fiat_calc">EUR Euro</option>
+												<option name="USD" value="USD" class="fiat_calc">USD dolar amerykański</option>
+												<option name="GBP" value="GBP" class="fiat_calc">GBP funt szterling</option>
+												<option name="CHF" value="CHF" class="fiat_calc">CHF frank szwajcarski</option>
+												 <!--Dodatkowe waluty tradycyjne-->
+												 <option name="HKD" value="HKD" class="fiat_calc">HKD dolar hongkongu</option>
+												 <option name="CAD" value="CAD" class="fiat_calc">CAD dolar kanadyjski</option>
+												 <option name="NZD" value="NZD" class="fiat_calc">NZD dolar nowozelandzki </option>
+												 <option name="CZK" value="CZK" class="fiat_calc">CZK korona czeska</option>
+												 <option name="SEK" value="SEK" class="fiat_calc">SEK korona szwedzka</option>
+												 <option name="SGD" value="SGD" class="fiat_calc">SGD dolar singapurski</option>
+												 <option name="HUF" value="HUF" class="fiat_calc">HUF forint (Węgry)</option>
+												 <option name="UAH" value="UAH" class="fiat_calc">UAH hrywna (Ukraina)</option>
+												 <option name="DKK" value="DKK" class="fiat_calc">DKK korona duńska </option>
+												 <option name="HRK" value="HRK" class="fiat_calc">HRK kuna (Chorwacja)</option>
+												 <option name="BGN" value="BGN" class="fiat_calc">BGN lew (Bułgaria)</option>	
+												 <option name="BRL" value="BRL" class="fiat_calc">BRL real (Brazylia)</option>
+												 <option name="ILS" value="ILS" class="fiat_calc">ILS szekel izraelski</option>	   
+												<option disabled="disabled" >  <span style="color:grey;"> Kryptowaluty:</span></option> <!-- rozdzielnik między krypto a fiatam--> 
+												<option name="BTC" value="BTC" class="cryp_calc">BTC <small>Bitcoin  </small></option>
+												<option name="ETH" value="ETH" class="cryp_calc">ETH Ethereum</option>
+												<option name="XMR" value="XMR" class="cryp_calc">XMR Monero</option>
+												<option name="DASH" value="DASH" class="cryp_calc">DASH</option>
+												<option name="LTC" value="LTC" class="cryp_calc">LTC Litecoin</option>
+												<option name="BTG" value="BTG" class="cryp_calc">BTG Bitcoin Gold</option>
+												<option name="LSK" value="LSK" class="cryp_calc">LSK Liskcoin</option>
+			 <!--Dodatkowe kryptowaluty-->
+			 <option name="BCH" value="BCH" class="cryp_calc">BCH Bitcoin Cash</option>
+			 <option name="ZEC" value="ZEC" class="cryp_calc">ZEC Zcash</option>
+			 <option name="DCR" value="DCR" class="cryp_calc">DCR Decred</option>
+			 <option name="BNB" value="BNB" class="cryp_calc">BNB Binance Coin</option>
+			 <option name="ETC" value="ETC" class="cryp_calc">ETC Ethereum Classic</option>
+			 <option name="XRP" value="XRP" class="cryp_calc">XRP Ripple</option>
+			 <option name="EOS" value="EOS" class="cryp_calc">EOS</option>
+			 <option name="ATOM" value="ATOM" class="cryp_calc">ATOM Cosmos</option>
+			 <option name="XTZ" value="XTZ" class="cryp_calc">XTZ Tezos</option>
+			 <option name="NEO" value="NEO" class="cryp_calc">NEO</option>
+			 <option name="XZC" value="XZC" class="cryp_calc">XZC Zcoin</option>
+			 <option name="STRAT" value="STRAT" class="cryp_calc">STRAT Stratis</option>
+			 <option name="OMG" value="OMG" class="cryp_calc">OMG OmiseGo</option>
+			 <option name="WAVES" value="WAVES" class="cryp_calc">WAVES</option>
+			 <option name="LINK" value="LINK" class="cryp_calc">LINK Chainlink</option>
+			
+											</select>
+											<input type="number" id="howmanyinput" name="ile" class="form-control col-6 offset-3" placeholder="ilosc" value="100" />
+										</div>
+										<div class="row"> 
+													  <h5 class="col-6" > Na co wymieniamy:</h5>
+													  <select name="naCo" class="col-md-4 col-6">
+												<option name="BTC" value="BTC" class="cryp_calc">BTC Bitcoin</option>
+												<option name="ETH" value="ETH" class="cryp_calc">ETH Ethereum</option>
+												<option name="XMR" value="XMR" class="cryp_calc">XMR Monero</option>
+												<option name="DASH" value="DASH" class="cryp_calc">DASH</option>
+												<option name="LTC" value="LTC" class="cryp_calc">LTC Litecoin</option>
+												<option name="BTG" value="BTG" class="cryp_calc">BTG Bitcoin Gold</option>
+												<option name="LSK" value="LSK" class="cryp_calc">LSK Liskcoin</option>
+												 <!--Dodatkowe kryptowaluty-->
+												 <option name="BCH" value="BCH" class="cryp_calc">BCH Bitcoin Cash</option>
+												 <option name="ZEC" value="ZEC" class="cryp_calc">ZEC Zcash</option>
+												 <option name="DCR" value="DCR" class="cryp_calc">DCR Decred</option>
+												 <option name="BNB" value="BNB" class="cryp_calc">BNB Binance Coin</option>
+												 <option name="ETC" value="ETC" class="cryp_calc">ETC Ethereum Classic</option>
+												 <option name="XRP" value="XRP" class="cryp_calc">XRP Ripple</option>
+												 <option name="EOS" value="EOS" class="cryp_calc">EOS</option>
+												 <option name="ATOM" value="ATOM" class="cryp_calc">ATOM Cosmos</option>
+												 <option name="XTZ" value="XTZ" class="cryp_calc">XTZ Tezos</option>
+												 <option name="NEO" value="NEO" class="cryp_calc">NEO</option>
+												 <option name="XZC" value="XZC" class="cryp_calc">XZC Zcoin</option>
+												 <option name="STRAT" value="STRAT" class="cryp_calc">STRAT Stratis</option>
+												 <option name="OMG" value="OMG" class="cryp_calc">OMG OmiseGo</option>
+												 <option name="WAVES" value="WAVES" class="cryp_calc">WAVES</option>
+												 <option name="LINK" value="LINK" class="cryp_calc">LINK Chainlink</option>
+												
+
+
+												<option disabled="disabled" >   <span style="color:grey;"> Waluty Tradycyjne:</span> </option> <!-- rozdzielnik między krypto a fiatam--> 
+												<option name="PLN" value="PLN" class="fiat_calc">PLN polski złoty</option>
+												<option name="EUR" value="EUR" class="fiat_calc">EUR Euro</option>
+												<option name="USD" value="USD" class="fiat_calc">USD dolar amerykański</option>
+												<option name="GBP" value="GBP" class="fiat_calc">GBP funt szterling</option>
+												<option name="CHF" value="CHF" class="fiat_calc">CHF frank szwajcarski</option>
+														   <!--Dodatkowe waluty tradycyjne-->
+														   <option name="HKD" value="HKD" class="fiat_calc">HKD dolar hongkongu</option>
+														   <option name="CAD" value="CAD" class="fiat_calc">CAD dolar kanadyjski</option>
+														   <option name="NZD" value="NZD" class="fiat_calc">NZD dolar nowozelandzki </option>
+														   <option name="CZK" value="CZK" class="fiat_calc">CZK korona czeska</option>
+														   <option name="SEK" value="SEK" class="fiat_calc">SEK korona szwedzka</option>
+														   <option name="SGD" value="SGD" class="fiat_calc">SGD dolar singapurski</option>
+														   <option name="HUF" value="HUF" class="fiat_calc">HUF forint (Węgry)</option>
+														   <option name="UAH" value="UAH" class="fiat_calc">UAH hrywna (Ukraina)</option>
+														   <option name="DKK" value="DKK" class="fiat_calc">DKK korona duńska </option>
+														   <option name="HRK" value="HRK" class="fiat_calc">HRK kuna (Chorwacja)</option>
+														   <option name="BGN" value="BGN" class="fiat_calc">BGN lew (Bułgaria)</option>	
+														   <option name="BRL" value="BRL" class="fiat_calc">BRL real (Brazylia)</option>
+														   <option name="ILS" value="ILS" class="fiat_calc">ILS szekel izraelski</option>	   
+														   
+														   
+
+											</select>
+										</div>
+											<input  type="text" class="form-control col-6 offset-3" name="wynik" id="valueinput" size="20" disabled="disabled" placeholder="="  /> 
+											
+										
+											
+									
+							</form> </div> 
+								  </div>
+								  <a value="Przelicz jednostki" onClick="przeliczaj()" class="btn btn-info text-light"><i class="fa fa-calculator  " > </i> Oblicz</a>
+		
+								</div> <!-- end calc-->
+							
+						</div> <!-- end calc--> 	
+					</div> <!-- end first row--> 
+					<h5> Kalkulator obsługuje poniższe waluty: </h5>
+					<div class="row" id="calpg-list">   
+
+						<div class="col-6"> 
+							<div class="card bg-light"  id="lastnews">
+								<div class="card-header">    <h5> <i class="fa fa-list-ul  " > </i> Waluty Fiat</h5>  </div>
+						
+						<ul class="list-group" id="feed-list">
+							<li class="list-group-item">PLN polski złoty</li>
+								<li class="list-group-item">EUR Euro</li>
+									<li class="list-group-item">USD dolar amerykański</li>
+										<li class="list-group-item">GBP funt szterling</li>
+											<li class="list-group-item">CHF frank szwajcarski</li>
+									   <!--Dodatkowe waluty tradycyjne-->
+									   <li class="list-group-item">HKD dolar hongkongu</li>
+										<li class="list-group-item">CAD dolar kanadyjski</li>
+											<li class="list-group-item">NZD dolar nowozelandzki </li>
+												<li class="list-group-item">CZK korona czeska</li>
+													<li class="list-group-item">SEK korona szwedzka</li>
+														<li class="list-group-item">SGD dolar singapurski</li>
+															<li class="list-group-item">HUF forint (Węgry)</li>
+																<li class="list-group-item">UAH hrywna (Ukraina)</li>
+																	<li class="list-group-item">DKK korona duńska </li>
+																		<li class="list-group-item">HRK kuna (Chorwacja)</li>
+																			<li class="list-group-item">BGN lew (Bułgaria)</li>
+																				<li class="list-group-item">BRL real (Brazylia)</li>
+																					<li class="list-group-item">ILS szekel izraelski</li>
+						</ul>
+						</div>
+						</div>
+						
+						<div class="col-6"> 	
+							<div class="card bg-light"  id="lastnews">
+								<div class="card-header">    <h5> <i class="fa fa-list-ul  " > </i> Kryptowaluty</h5>  </div>
+						
+						<ul class="list-group" id="feed-list">
+						<li class="list-group-item">BTC Bitcoin  </li>
+						<li class="list-group-item">ETH Ethereum</li>
+						<li class="list-group-item">XMR Monero</li>
+						<li class="list-group-item">DASH</li>
+						<li class="list-group-item">LTC Litecoin</li>
+						<li class="list-group-item">BTG Bitcoin Gold</li>
+						<li class="list-group-item">LSK Liskcoin</li>
+						<li class="list-group-item">BCH Bitcoin Cash</li>
+						<li class="list-group-item">ZEC Zcash</li>
+						<li class="list-group-item">DCR Decred</li>
+						<li class="list-group-item">BNB Binance Coin</li>
+						<li class="list-group-item">ETC Ethereum Classic</li>
+						<li class="list-group-item">XRP Ripple</li>
+						<li class="list-group-item">EOS</li>
+						<li class="list-group-item">ATOM Cosmos</li>
+						<li class="list-group-item">XTZ Tezos</li>
+						<li class="list-group-item">NEO</li>
+						<li class="list-group-item">XZC Zcoin</li>
+						<li class="list-group-item">STRAT Stratis</li>
+						<li class="list-group-item">OMG OmiseGo</li>
+						<li class="list-group-item">WAVES</li>
+						<li class="list-group-item">LINK Chainlink</li>
+						
+						</ul>
+						</div>
+						</div>
+						
+						</div>
+
+<hr>
+					<h4> <i class="fa fa-info-circle"> </i> Informacje </h4>
+					<p> Przejrzysty, prosty w obsłudze i dobrze rozplanowany kalkulator. Zawiera bieżące dane na temat kursu kilkunastu kryptowalut oraz walut tradycyjnych z Europy i świata na których podstawie dokonuje szybkich obliczeń.   </p>
+					<p> Kursy walut tradycyjnych aktualizowane są na podstawie udostępnionych danych Narodowego Banku Polskiego które są aktualizowane każdego dnia. Ceny walut kryptograficznych są średnią wartością liczoną na podstawie cen ponad 100 giełd które mają je w swojej ofercie.   </p>
+
+
+</div>   <!-- END LEFT PANEL  -->
+                    <!-- RIGHT PANEL  -->
+					<div class="col-md-4" id="righbody"> 
+			
+						<!-- GLOBAL STATISTIC -->
+					<ul class="list-group">
+						<li class="list-group-item list-group-item-primary"><i class="fa fa-signal" > </i><b> Kapitalizacja: </b> <span id="kapitalizacja"> </span></li>
+						<!-- <li class="list-group-item ">Ilość Coinow:  <span id="ilosc_coinow"> </span>  </li> -->
+						<li class="list-group-item" style="color:green" ><i class="fa fa-bitcoin"> </i> Dominacja BTC:  <span id="btc_dominacja"> </span> 
+						<div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" id="progress_bar"> 
+				  </div> </div>
+</li>
+<li class="list-group-item"><i class="fa fa-money" > </i> Wolumen:  <span id="volume"> </span></li>
+					   
+					  </ul> <!-- end -->
+					  
+
+
+
+					  		  	 <!-- NEWS CARD  -->
+		
+			   <div class="card bg-light"  id="lastnews">
+				<div class="card-header">    <h5> <i class="fa fa-newspaper-o  " > </i> Ostatni artykuł</h5>  </div>
+				<div class="card-body">
+					<img class="card-img-top img-fluid"  id="img" > 
+				  <p class="card-text" id="title" > </p>
+				  <span id="time-nw"> </span>
+				</div>
+				  <a id="url"  class="btn btn-info"><i class="fa fa-newspaper-o  " > </i> Czytaj Dalej</a> 
+			  </div>  <!--END NEWS CARD  -->
+		 <!-- CHART  -->
+		
+		 <div id="chart">
+
+			<script type="text/javascript">
+				baseUrl = "https://widgets.cryptocompare.com/";
+				var scripts = document.getElementsByTagName("script");
+				var embedder = scripts[ scripts.length - 1 ];
+				(function (){
+				var appName = encodeURIComponent(window.location.hostname);
+				if(appName==""){appName="local";}
+				var s = document.createElement("script");
+				s.type = "text/javascript";
+				s.async = true;
+				var theUrl = baseUrl+'serve/v1/coin/chart?fsym=BTC&tsym=PLN';
+				s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+				embedder.parentNode.appendChild(s);
+				})();
+				</script>
+
+
+	  </div>  <!--CHART -->
+
+
+			
+		
+				
+		</div>   <!-- END RIGHT PANEL  -->
+		
+		
+
+				
+		
+		</div>  <!-- end row MIDDLE-->
+
+							 <!-- Footer  -->
+		
+						<div class="col-12" id="footer">
+		
+				
+							<div class="row"> 
+								<div class="col-md-2"> <a href="index.html"> Główna </a>    </div>
+								<div class="col-md-2"> <a href="kalkulator.html"> Kalkulator </a>  </div>
+								<div class="col-md-2"> <a href="newsy.html"> Gazeta </a>    </div>
+								<div class="col-md-2"> <a href="kontakt.html"> Kontakt </a>    </div>
+								<div class="col-md-2"> <a href="gieldy.html"> Giełdy </a>    </div>
+								<div class="col-md-2"> <a href="info.html"> Informacje </a>    </div>
+								
+								</div>
+								<span><i class="fa fa-copyright"></i> Copyright by <img src="favicon.ico">Crypinfo</span>	
+
+						</div>  <!-- end footer  -->
+		
+						</div> <!-- end container -->
+			
+			</section>
+		
+	</main>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	
+	<script src="js/bootstrap.min.js"></script>
+	
+
+	
+
+</body>
+</html>

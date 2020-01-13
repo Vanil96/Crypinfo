@@ -94,18 +94,18 @@ async function procenty() {
 
   
 //kapitalizacja       //'de-DE' jezyk niemiecki oddziela części dziesiętne przecinkiem, a tysiące kropką
-document.getElementById('mkcap_btc').textContent = data.RAW.BTC.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' }); 
-document.getElementById('mkcap_bch').textContent = data.RAW.BCH.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
-document.getElementById('mkcap_eth').textContent = data.RAW.ETH.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
-document.getElementById('mkcap_xmr').textContent = data.RAW.XMR.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
-document.getElementById('mkcap_dash').textContent = data.RAW.DASH.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
-document.getElementById('mkcap_ltc').textContent = data.RAW.LTC.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
-document.getElementById('mkcap_zec').textContent = data.RAW.ZEC.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
-document.getElementById('mkcap_dcr').textContent = data.RAW.DCR.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
-document.getElementById('mkcap_bnb').textContent = data.RAW.BNB.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
-document.getElementById('mkcap_btg').textContent = data.RAW.BTG.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
-document.getElementById('mkcap_etc').textContent = data.RAW.ETC.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
-document.getElementById('mkcap_lsk').textContent = data.RAW.LSK.USD.MKTCAP.toLocaleString('de-DE', { style: 'currency', currency: 'USD' });
+document.getElementById('mkcap_btc').textContent = data.RAW.BTC.USD.MKTCAP.toLocaleString()+" $"; 
+document.getElementById('mkcap_bch').textContent = data.RAW.BCH.USD.MKTCAP.toLocaleString()+" $"; 
+document.getElementById('mkcap_eth').textContent = data.RAW.ETH.USD.MKTCAP.toLocaleString()+" $"; 
+document.getElementById('mkcap_xmr').textContent = data.RAW.XMR.USD.MKTCAP.toLocaleString()+" $"; 
+document.getElementById('mkcap_dash').textContent = data.RAW.DASH.USD.MKTCAP.toLocaleString()+" $"; 
+document.getElementById('mkcap_ltc').textContent = data.RAW.LTC.USD.MKTCAP.toLocaleString()+" $"; 
+document.getElementById('mkcap_zec').textContent = data.RAW.ZEC.USD.MKTCAP.toLocaleString()+" $"; 
+document.getElementById('mkcap_dcr').textContent = data.RAW.DCR.USD.MKTCAP.toLocaleString()+" $"; 
+document.getElementById('mkcap_bnb').textContent = data.RAW.BNB.USD.MKTCAP.toLocaleString()+" $"; 
+document.getElementById('mkcap_btg').textContent = data.RAW.BTG.USD.MKTCAP.toLocaleString()+" $"; 
+document.getElementById('mkcap_etc').textContent = data.RAW.ETC.USD.MKTCAP.toLocaleString()+" $"; 
+document.getElementById('mkcap_lsk').textContent = data.RAW.LSK.USD.MKTCAP.toLocaleString()+" $"; 
 
  
 // BITCOIN LOGS
@@ -153,52 +153,52 @@ document.getElementById('mkcap_lsk').textContent = data.RAW.LSK.USD.MKTCAP.toLoc
 
  if (btc_pct>0) { document.getElementById('BTCpct').setAttribute("style", "color:green;") }
  else if(btc_pct<0){document.getElementById('BTCpct').setAttribute("style", "color:red;");}
-else {document.getElementById('BTCpct').setAttribute("style", "color:fiolet;");};
+else {document.getElementById('BTCpct').setAttribute("style", "color:purple;");};
 
   if (eth_pct>0) { document.getElementById('ETHpct').setAttribute("style", "color:green;") }
   else if(eth_pct<0) {document.getElementById('ETHpct').setAttribute("style", "color:red;");}
-  else {document.getElementById('ETHpct').setAttribute("style", "color:fiolet;");}  ;
+  else {document.getElementById('ETHpct').setAttribute("style", "color:purple;");}  ;
 
   if (xmr_pct>0) { document.getElementById('XMRpct').setAttribute("style", "color:green;"); }
 else if(xmr_pct<0){document.getElementById('XMRpct').setAttribute("style", "color:red;"); }
-else {document.getElementById('XMRpct').setAttribute("style", "color:fiolet;");}  ;
+else {document.getElementById('XMRpct').setAttribute("style", "color:purple;");}  ;
 
   if (ltc_pct>0) { document.getElementById('LTCpct').setAttribute("style", "color:green;"); }
   else if(ltc_pct<0){document.getElementById('LTCpct').setAttribute("style", "color:red;"); }
-  else {document.getElementById('LTCpct').setAttribute("style", "color:fiolet;"); }  ;
+  else {document.getElementById('LTCpct').setAttribute("style", "color:purple;"); }  ;
 
   if (dash_pct>0) { document.getElementById('DASHpct').setAttribute("style", "color:green;"); }
   else if(dash_pct<0){document.getElementById('DASHpct').setAttribute("style", "color:red;"); }
-  else {document.getElementById('DASHpct').setAttribute("style", "color:fiolet;");}  ;
+  else {document.getElementById('DASHpct').setAttribute("style", "color:purple;");}  ;
 
   if (btg_pct>0) { document.getElementById('BTGpct').setAttribute("style", "color:green;"); }
   else if(btg_pct<0) { document.getElementById('BTGpct').setAttribute("style", "color:red;");}
-  else {document.getElementById('BTGpct').setAttribute("style", "color:fiolet;");}  ;
+  else {document.getElementById('BTGpct').setAttribute("style", "color:purple;");}  ;
   
   if (lsk_pct>0) { document.getElementById('LSKpct').setAttribute("style", "color:green;"); }
   else if(lsk_pct<0){document.getElementById('LSKpct').setAttribute("style", "color:red;");}
-  else {document.getElementById('LSKpct').setAttribute("style", "color:fiolet;");}  ;
+  else {document.getElementById('LSKpct').setAttribute("style", "color:purple;");}  ;
 
   if (etc_pct>0) { document.getElementById('ETCpct').setAttribute("style", "color:green;"); }
 else if(etc_pct<0){ document.getElementById('ETCpct').setAttribute("style", "color:red;");}
-  else { document.getElementById('ETCpct').setAttribute("style", "color:fiolet;"); }  ;
+  else { document.getElementById('ETCpct').setAttribute("style", "color:purple;"); }  ;
 
   if (bch_pct>0) { document.getElementById('BCHpct').setAttribute("style", "color:green;"); }
 else if(bch_pct<0) {document.getElementById('BCHpct').setAttribute("style", "color:red;");}
-  else {document.getElementById('BCHpct').setAttribute("style", "color:fiolet;");}  ;
+  else {document.getElementById('BCHpct').setAttribute("style", "color:purple;");}  ;
 
   if (dcr_pct>0) { document.getElementById('DCRpct').setAttribute("style", "color:green;"); }
   else if(dcr_pct<0){document.getElementById('DCRpct').setAttribute("style", "color:red;"); }
-  else {document.getElementById('DCRpct').setAttribute("style", "color:fiolet;");}  ;
+  else {document.getElementById('DCRpct').setAttribute("style", "color:purple;");}  ;
 
   if (bnb_pct>0) { document.getElementById('BNBpct').setAttribute("style", "color:green;"); }
   else if(bnb_pct<0) {document.getElementById('BNBpct').setAttribute("style", "color:red;");}
-  else {document.getElementById('BNBpct').setAttribute("style", "color:fiolet;");}  ;
+  else {document.getElementById('BNBpct').setAttribute("style", "color:purple;");}  ;
 
 
   if (zec_pct>0) { document.getElementById('ZECpct').setAttribute("style", "color:green;"); }
   else if(zec_pct<0) {document.getElementById('ZECpct').setAttribute("style", "color:red;"); } 
-else {document.getElementById('ZECpct').setAttribute("style", "color:fiolet;");}
+else {document.getElementById('ZECpct').setAttribute("style", "color:purple;");}
    ;
 
 

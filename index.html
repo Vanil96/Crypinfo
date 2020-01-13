@@ -8,7 +8,7 @@
 	<title>Crypinfo</title>
 	<meta name="description" content="Portal skupiający informacje odnośnie kryptowalut">
 	<meta name="keywords" content="kryptowaluty, bitcoin, newsy, kurs, klkulator ">
-	<meta name="author" content="Daniel Motyka">
+	<meta name="author" content="Crypinfo">
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	<link rel="shortcut icon" href="favicon.ico" />
 		<!--  Bootstrap connection -->
@@ -22,7 +22,7 @@
 </head>
 
 <body class="bg-light">
-	
+	<script src="javascript/timeconvert.js" async> </script>
 	<script src="javascript/allcrypto-prices.js" async> </script>
 	<script src="javascript/waluty.js" async> </script>
 	<script src="javascript/global_news.js" async> </script>
@@ -47,7 +47,7 @@
 									  <div class="navbar-nav">
 										<a class="nav-item nav-link" href="index.html"><i class="fa fa-home"></i> Główna <span class="sr-only">(current)</span></a>
 										<a class="nav-item nav-link" href="newsy.html"><i class="fa fa-newspaper-o" > </i> Gazeta</a>
-										<a class="nav-item nav-link" href="kalkulator.html"><i class="fa fa-calculator" > </i> Kalkulator</a>
+										
 										<li class="nav-item dropdown">
 											<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 												<i class="fa fa-line-chart"></i> Kryptowaluty
@@ -68,15 +68,10 @@
 											</div>
 										  </li>
 						
-						
-										<a class="nav-item nav-link" href="info.html"><i class="fa fa-info-circle"></i> Info</a>
+										  <a class="nav-item nav-link" href="kalkulator.html"><i class="fa fa-calculator" > </i> Kalkulator</a>
+										  <a class="nav-item nav-link" href="gieldy.html"><i class="fa fa-bank" > </i> Giełdy</a>
+										  <a class="nav-item nav-link" href="info.html"><i class="fa fa-info-circle"></i> Info</a>
 										<a class="nav-item nav-link" href="kontakt.html"><i class="fa fa-envelope"></i> Kontakt</a>
-									
-
-									
-											
-										
-										  
 
 									</div>
 									</div>
@@ -91,7 +86,7 @@
 					<div class="row">
 								
 						<div class="col-12 col-md-8 order-2 order-md-1 "> 
-							<div class="heading"><h3> Kursy Kryptowalut <br> </h3> <h5> Sprawdź aktualizowane na bieżąco kursy. Wyszukaj swoją kryptowalutę i sprawdź jej szczegółowe statystyki. </h5><small><i class="fa fa-refresh"></i> Aktualizacja co 10 sekund</small> </div>
+							<div class="heading"><h3><i class="fa fa-line-chart"></i> Kursy Kryptowalut </h3>  <h5> Sprawdź aktualizowane na bieżąco kursy. Wyszukaj swoją kryptowalutę i sprawdź jej szczegółowe statystyki. </h5><small><i class="fa fa-refresh"></i> Aktualizacja co 10 sekund</small> </div>
 						</div>
 					
 					<!-- fiat values -->
@@ -140,56 +135,56 @@
 	  <tr>
 		<td scope="row"> 
 		
-	 <img src="img/BTC.png">  BTC    </td>
+	 <img src="img/BTC.png">  <a href="btc.html"> BTC </a>    </td>
 	
 		<td><span id='BTCpln'> </span>  <br>  </td>
 		<td> <span id='BTCpct'> </span> </td>
 			<td class="d-none d-lg-block" > <span id="mkcap_btc" class="mk_cap"> MkCap </span>  </td>
 	  </tr>
 	  <tr>
-		<td scope="row"><img src="img/BCH.png"> BCH</td>
+		<td scope="row"><img src="img/BCH.png"> <a href="bch.html">BCH</a></td>
 		
 		<td><span id='BCHpln'>  </span>  </td>
 		<td>   <span id='BCHpct'> </span>    </td>
 		<td class="d-none d-lg-block" > <span id="mkcap_bch" class="mk_cap"> MkCap </span>  </td>
 	</tr>
 	  <tr>
-		<td scope="row"><img src="img/ETH.png"> ETH</td>
+		<td scope="row"><img src="img/ETH.png"> <a href="eth.html">ETH</a></td>
 		
 		<td ><span id='ETHpln'>   </span> </td>
 		<td>   <span id='ETHpct'> </span>    </td>
 		<td class="d-none d-lg-block" > <span id="mkcap_eth" class="mk_cap"> MkCap </span>  </td>
 	</tr>
 	  <tr>
-		  <td scope="row"><img src="img/XMR.png"> XMR</td>
+		  <td scope="row"><img src="img/XMR.png"> <a href="xmr.html">XMR</a></td>
 		  
 		  <td><span id='XMRpln'> </span>  </td>
 		  <td>   <span id='XMRpct'> </span>    </td>
 		  <td class="d-none d-lg-block" > <span id="mkcap_xmr" class="mk_cap"> MkCap </span>  </td>
 		</tr>
 		<tr>
-		  <td scope="row"><img src="img/DASH.png"> DASH</th>
+		  <td scope="row"><img src="img/DASH.png"> <a href="dash.html"> DASH </a></th>
 		 
 		  <td><span id='DASHpln'>  </span> </td>
 		  <td>   <span id='DASHpct'> </span>    </td>
 		  <td class="d-none d-lg-block" > <span id="mkcap_dash" class="mk_cap"> MkCap </span>  </td>
 		</tr>
 		<tr>
-		  <td scope="row"><img src="img/LTC.png"> LTC</td>
+		  <td scope="row"><img src="img/LTC.png"><a href="ltc.html"> LTC</a></td>
 		  
 		  <td><span id='LTCpln'>  </span> </td>
 		  <td>   <span id='LTCpct'> </span>    </td>
 		  <td class="d-none d-lg-block" > <span id="mkcap_ltc" class="mk_cap"> MkCap </span>  </td>
 		</tr>
 		<tr>
-			<td scope="row"><img src="img/ZEC.png"> ZEC</td>
+			<td scope="row"><img src="img/ZEC.png"><a href="zec.html"> ZEC</a></td>
 			
 			<td><span id='ZECpln'>  </span> </td>
 			<td>   <span id='ZECpct'> </span>    </td>
 			<td class="d-none d-lg-block" > <span id="mkcap_zec" class="mk_cap"> MkCap </span>  </td>
 		</tr>
 		  <tr>
-			<td scope="row"><img src="img/DCR.png"> DCR</td>
+			<td scope="row"><img src="img/DCR.png"> <a href="dcr.html">DCR</a></td>
 			
 			<td><span id='DCRpln'>  </span> </td>
 			<td>   <span id='DCRpct'> </span>   </td>
@@ -197,14 +192,14 @@
 		</tr>
 
 		  <tr>
-			<td scope="row"><img src="img/BNB.png"> BNB</td>
+			<td scope="row"><img src="img/BNB.png"><a href="bnb.html"> BNB</a></td>
 			
 			<td><span id='BNBpln'>  </span> </td>
 			<td>   <span id='BNBpct'> </span>    </td>
 			<td class="d-none d-lg-block" > <span id="mkcap_bnb" class="mk_cap"> MkCap </span>  </td>
 		</tr>
 		<tr>
-			<td scope="row"><img src="img/BTG.png"> BTG</td>
+			<td scope="row"><img src="img/BTG.png"><a href="btg.html">BTG</a></td>
 		
 			<td><span id='BTGpln'>  </span> </td>
 			<td>   <span id='BTGpct'> </span>    </td>
@@ -212,14 +207,14 @@
 		</tr>
 		
 		<tr>
-			<td scope="row"><img src="img/ETC.png"> ETC</td>
+			<td scope="row"><img src="img/ETC.png"><a href="etc.html"> ETC</a></td>
 			
 			<td><span id='ETCpln'>  </span> </td>
 			<td>   <span id='ETCpct'> </span>   </td>
 			<td class="d-none d-lg-block" > <span id="mkcap_etc" class="mk_cap"> MkCap </span>  </td>
 		</tr>
 		  <tr>
-			<td scope="row"><img src="img/LSK.png"> LSK</td>
+			<td scope="row"><img src="img/LSK.png"><a href="lsk.html"> LSK</a></td>
 			
 			<td><span id='LSKpln'>  </span> </td>
 			<td>   <span id='LSKpct'> </span>    </td>
@@ -255,6 +250,7 @@
 	<div class="card-body">
 		<img class="card-img-top img-fluid"  id="img" > 
 	  <p class="card-text" id="title" > </p>
+	  <span id="time-nw"> </span>
 	</div>
 	  <a id="url"  class="btn btn-info"><i class="fa fa-newspaper-o" > </i> Czytaj Dalej</a> 
   </div>  <!--END NEWS CARD  -->
@@ -331,7 +327,7 @@
 		<H4><i class="fa fa-info-circle" aria-hidden="true"></i> Kilka słów o serwisie </H4>
 		<p> Strona internetowa Crypinfo.pl umożliwia łatwy i szybki dostęp do notowań popularnych kryptowalut w oparciu o aktualne dane statystyczne. Dzięki danym zgromadzonym na stronie oraz prostym przelicznikom, łatwiej będzie Ci zapoznać się ze światem walut kryptograficznych, oraz poznać cechy którymi ten rynek się charakteryzuje. 
 </p>
-<h5>Dodatkowo</h5>
+
 <p> W celu lepszej orientacji na rynku światowym, nasza strona poza notowaniami kryptowalut, oferuje również kursy popularnych walut tradycyjnych według Narodowego Banku Polskiego. Stworzone zostały również przeróżne przeliczniki, oraz prosty kalkulator którym możemy przeliczać przemiennie wartości po kursach walut tradycyjnych jak i kryptograficznych
 </p>
 <p> Oferujemy Ci również dostęp do świeżych nowinek ekonomicznych odnośnie wszystkich kryptowalut oraz blockchain. W zakładce <i>Gazeta</i> odnajdziesz aktualizowaną listę artykułów, posegregowaną od najnowszej, aktualizowaną co 2 minuty. Dane pobierane są z najpopularniejszych serwisów informacyjnych w świecie blockchain takich jak: <a href="https://bitcoinmagazine.com/"> Bitcoin Magazine</a>, <a href="https://cryptonewsreview.com/"> CryptoNewsReview</a>,<a href="https://www.cryptoglobe.com/">  CryptoGlobe</a>, <a href="https://cointelegraph.com/"> CoinTelegraph</a> oraz wiele więcej. 
@@ -354,15 +350,18 @@
  
 
 		<div class="row"> 
-<div class="col-3"> <a href="kalkulator.html"> Kalkulator </a>  </div>
-<div class="col-3"> <a href="newsy.html"> Gazeta </a>    </div>
-<div class="col-3"> <a href="kontakt.html"> Kontakt </a>    </div>
-<div class="col-3"> <a href="info.html"> Informacje </a>    </div>
+			<div class="col-md-2"> <a href="index.html"> Główna </a>    </div>
+			<div class="col-md-2"> <a href="kalkulator.html"> Kalkulator </a>  </div>
+			<div class="col-md-2"> <a href="newsy.html"> Gazeta </a>    </div>
+			<div class="col-md-2"> <a href="kontakt.html"> Kontakt </a>    </div>
+			<div class="col-md-2"> <a href="gieldy.html"> Giełdy </a>    </div>
+			<div class="col-md-2"> <a href="info.html"> Informacje </a>    </div>
+			
 </div>
 
 		
 <p>Strona www.crypinfo.pl ani w całości ani w części nie stanowi „rekomendacji” w rozumieniu przepisów Rozporządzenia Ministra Finansów z dnia 19 października 2005 r. w sprawie informacji stanowiących rekomendacje dotyczące instrumentów finansowych, lub ich emitentów (Dz.U. z 2005 r. Nr 206, poz. 1715). Zawarte w serwisie treści nie spełniają wymogów stawianych rekomendacjom w rozumieniu w/w ustawy, nie zawierają konkretnej wyceny żadnego instrumentu finansowego, nie opierają się na żadnej metodzie wyceny, a także nie określają ryzyka inwestycyjnego. Portal nie ponosi odpowiedzialności za wszelkie decyzje, podjęte pod wpływem danych prezentowanych w serwisie. </p>
-<span><i class="fa fa-copyright"></i> Copyright by <img src="favicon.ico">Crypinfo</span>	 <br>	
+<span><i class="fa fa-copyright"></i> Copyright by <img src="favicon.ico">Crypinfo</span>
 
 
 				</div>  <!-- end footer  -->
