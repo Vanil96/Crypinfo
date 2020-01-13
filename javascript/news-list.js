@@ -240,5 +240,5 @@ document.getElementById("img_feed32").setAttribute("src",logi[32].img);
  }
 
 
-news_feeds();
+
 
