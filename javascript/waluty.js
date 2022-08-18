@@ -3,7 +3,7 @@
 
 async function waluty_fiat() {
 
-  const nbp_api = "http://api.nbp.pl/api/exchangerates/tables/A/?format=json"; 
+  const nbp_api = "https://api.nbp.pl/api/exchangerates/tables/A/?format=json"; 
     
   const response = await fetch(nbp_api);
   const data = await response.json();
